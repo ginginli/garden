@@ -826,6 +826,31 @@ body::before {
     text-shadow: 0 0 10px rgba(132, 192, 97, 0.5);
 }
 
+.code-rewards {
+    margin-bottom: 20px;
+}
+
+.reward-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-bottom: 8px;
+    border-left: 3px solid rgba(132, 192, 97, 0.5);
+}
+
+.reward-icon {
+    font-size: 1.5rem;
+}
+
+.reward-item span:last-child {
+    color: var(--clr-text-light);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 .code-description {
     color: var(--clr-text-muted);
     font-size: 1.05rem;
