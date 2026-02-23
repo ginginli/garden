@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Codes | Garden Horizons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">
+                <span class="text-green">Garden</span> <span class="text-orange">Horizons</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html#hero">Home</a>
+                <a href="index.html#features">Features</a>
+                <a href="index.html#live-tracker">Live Tracker</a>
+                <a href="index.html#what-is">What is</a>
+                <a href="index.html#how-to">How to</a>
+                <a href="index.html#why">Why</a>
+                <a href="codes.html">Codes</a>
+                <a href="index.html#faq">FAQ</a>
+            </nav>
+            <a href="https://www.roblox.com/games/130594398886540/Garden-Horizons" target="_blank" class="btn btn-primary">Play on Roblox</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="codes-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Active <span class="text-green">Codes</span></h2>
+                    <p>Redeem these codes in-game for exclusive rewards!</p>
+                </div>
+
+                <div class="codes-grid">
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="code-icon">💰</div>
+                            <h3>RELEASE</h3>
+                        </div>
+                        <p class="code-description">Redeem for bonus cash</p>
+                        <div class="code-copy">
+                            <input type="text" value="RELEASE" readonly class="code-input">
+                            <button class="btn-copy" onclick="copyCode('RELEASE')">Copy</button>
+                        </div>
+                        <span class="code-status active">Active</span>
+                    </div>
+
+                    <div class="code-card">
+                        <div class="code-header">
+                            <div class="code-icon">🌅</div>
+                            <h3>DAWN</h3>
+                        </div>
+                        <p class="code-description">Redeem for special Dawn Fruit seed</p>
+                        <div class="code-requirement">
+                            <span class="requirement-icon">⚠️</span>
+                            <span>Requires joining the game's Roblox group</span>
+                        </div>
+                        <div class="code-copy">
+                            <input type="text" value="DAWN" readonly class="code-input">
+                            <button class="btn-copy" onclick="copyCode('DAWN')">Copy</button>
+                        </div>
+                        <span class="code-status active">Active</span>
+                    </div>
+                </div>
+
+                <div class="codes-info">
+                    <h3>How to Redeem Codes</h3>
+                    <ol class="redeem-steps">
+                        <li>Launch Garden Horizons on Roblox</li>
+                        <li>Look for the Codes button in the game menu</li>
+                        <li>Enter the code exactly as shown (ALL CAPS)</li>
+                        <li>Click Redeem to claim your reward!</li>
+                    </ol>
+                </div>
+
+                <div class="codes-note">
+                    <p><strong>Important:</strong> Codes are case-sensitive and must be entered in ALL CAPS. Join the official Roblox group to unlock group-exclusive codes!</p>
+                </div>
+
+                <div class="codes-cta">
+                    <a href="https://www.roblox.com/games/130594398886540/Garden-Horizons" target="_blank" class="btn btn-primary btn-large">
+                        Play Garden Horizons
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>Garden Horizons reached 200,000+ players on launch day and continues to grow!</p>
+                <p>&copy; 2026 Garden Horizons Fan Site. All rights reserved.</p>
+                <p class="disclaimer">
+                    <strong>Disclaimer:</strong> This is an unofficial fan and promotional site. We are not affiliated with, endorsed by, or sponsored by Roblox Corporation. "Roblox" is a registered trademark of Roblox Corporation.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function copyCode(code) {
+            navigator.clipboard.writeText(code).then(() => {
+                const button = event.target;
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                button.style.background = 'var(--clr-green-main)';
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>

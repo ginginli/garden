@@ -15,9 +15,11 @@
             <nav class="nav-menu">
                 <a href="#hero">Home</a>
                 <a href="#features">Features</a>
+                <a href="#live-tracker">Live Tracker</a>
                 <a href="#what-is">What is</a>
                 <a href="#how-to">How to</a>
                 <a href="#why">Why</a>
+                <a href="codes.html">Codes</a>
                 <a href="#faq">FAQ</a>
             </nav>
             <a href="https://www.roblox.com/games/130594398886540/Garden-Horizons" target="_blank" class="btn btn-primary">Play on Roblox</a>
@@ -53,15 +55,15 @@
                             <div class="shop-item">
                                 <div>
                                     <strong>🌱 Bill's Seed Shop</strong>
-                                    <span class="stock-list">Tomato(x1), Onion(x4)...</span>
+                                    <span class="stock-list">Wheat(x12), Carrot(x8), Tomato(x3)...</span>
                                 </div>
                                 <div class="timer-badge" id="seed-timer">05:00</div>
                             </div>
                             <div class="shop-item">
                                 <div>
                                     <strong>🔧 Molly's Gear Shop</strong>
-                                    <span class="stock-list">Sprinkler(x3), Tool(x8)...</span>
-                                div>
+                                    <span class="stock-list">Watering Can(x15), Sprinkler(x4)...</span>
+                                </div>
                                 <div class="timer-badge text-orange" id="gear-timer">05:00</div>
                             </div>
                         </div>
@@ -69,12 +71,133 @@
                     <div class="feature-card">
                         <div class="card-icon">🌫️</div>
                         <h3>Dynamic Weather</h3>
-                        <p>Adapt to sudden weather changes! When the <strong class="text-green">@Fog</strong> rolls in, enjoy a 1x Growth Boost and watch out for rare <strong>FOGGY</strong> crop mutations.</p>
+                        <p>Rain gives +25% growth. Fog brings +1x boost and FOGGY mutations. Storm delivers +2x growth with rare mutations. Snow slows growth but creates CHILLED variants.</p>
                     </div>
                     <div class="feature-card">
                         <div class="card-icon">📖</div>
-                        <h3>Flora Diary & Glory</h3>
-                        <p>Unlock new gear, expand your comprehensive Flora Diary with every new discovery, and climb the global leaderboards to show off your garden empire.</p>
+                        <h3>Flora Diary & Real Learning</h3>
+                        <p>Unlock new gear, expand your Flora Diary with real botanical facts - did you know tomatoes are actually berries? Climb global leaderboards and show off your garden empire.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="live-tracker" class="live-tracker-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Live <span class="text-green">Stock Tracker</span></h2>
+                    <p>Real-time shop inventory updates - never miss a rare seed again!</p>
+                </div>
+                <div class="tracker-grid">
+                    <div class="tracker-card">
+                        <div class="tracker-header">
+                            <h3>🌱 Bill's Seed Shop</h3>
+                            <div class="refresh-timer">
+                                <span class="timer-label">Next Refresh:</span>
+                                <span class="timer-display" id="tracker-seed-timer">05:00</span>
+                            </div>
+                        </div>
+                        <div class="stock-grid" id="seed-stock">
+                            <div class="stock-item common">
+                                <span class="item-name">Wheat</span>
+                                <span class="item-stock">x12</span>
+                            </div>
+                            <div class="stock-item common">
+                                <span class="item-name">Carrot</span>
+                                <span class="item-stock">x8</span>
+                            </div>
+                            <div class="stock-item uncommon">
+                                <span class="item-name">Tomato</span>
+                                <span class="item-stock">x3</span>
+                            </div>
+                            <div class="stock-item uncommon">
+                                <span class="item-name">Onion</span>
+                                <span class="item-stock">x5</span>
+                            </div>
+                            <div class="stock-item uncommon">
+                                <span class="item-name">Strawberry</span>
+                                <span class="item-stock">x6</span>
+                            </div>
+                            <div class="stock-item rare">
+                                <span class="item-name">Banana</span>
+                                <span class="item-stock">x1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tracker-card">
+                        <div class="tracker-header">
+                            <h3>🔧 Molly's Gear Shop</h3>
+                            <div class="refresh-timer">
+                                <span class="timer-label">Next Refresh:</span>
+                                <span class="timer-display" id="tracker-gear-timer">03:15</span>
+                            </div>
+                        </div>
+                        <div class="stock-grid" id="gear-stock">
+                            <div class="stock-item common">
+                                <span class="item-name">Watering Can</span>
+                                <span class="item-stock">x15</span>
+                            </div>
+                            <div class="stock-item common">
+                                <span class="item-name">Hoe</span>
+                                <span class="item-stock">x20</span>
+                            </div>
+                            <div class="stock-item uncommon">
+                                <span class="item-name">Basic Sprinkler</span>
+                                <span class="item-stock">x4</span>
+                            </div>
+                            <div class="stock-item uncommon">
+                                <span class="item-name">Fertilizer</span>
+                                <span class="item-stock">x6</span>
+                            </div>
+                            <div class="stock-item rare">
+                                <span class="item-name">Auto-Harvester</span>
+                                <span class="item-stock">x2</span>
+                            </div>
+                            <div class="stock-item epic">
+                                <span class="item-name">Golden Shovel</span>
+                                <span class="item-stock">x1</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tracker-card weather-card">
+                        <div class="tracker-header">
+                            <h3>🌤️ Current Weather</h3>
+                            <div class="weather-status">
+                                <span class="weather-icon" id="current-weather-icon">☀️</span>
+                                <span class="weather-name" id="current-weather-name">Sunny</span>
+                            </div>
+                        </div>
+                        <div class="weather-info">
+                            <div class="weather-effect">
+                                <strong>Effect:</strong>
+                                <span id="weather-effect">Normal growth rate</span>
+                            </div>
+                            <div class="weather-next">
+                                <strong>Next Change:</strong>
+                                <span class="timer-display" id="weather-timer">15:00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tracker-note">
+                    <p>💡 <strong>Pro Tip:</strong> For real-time updates, join our Discord community where Dawnbot posts live stock changes!</p>
+                </div>
+                <div class="discord-embed-section">
+                    <h3>🔴 Live Updates from Discord</h3>
+                    <p>Real-time stock updates are posted in our Discord community. Join to get instant notifications!</p>
+                    <div class="discord-preview">
+                        <div class="discord-channel-info">
+                            <div class="channel-icon">💬</div>
+                            <div class="channel-details">
+                                <strong>#stock-tracker</strong>
+                                <span>Live seed, gear, and weather updates</span>
+                            </div>
+                        </div>
+                        <a href="https://discord.com/channels/1392614350686130198/1392618425213255760" target="_blank" class="btn btn-discord">
+                            Open in Discord
+                        </a>
                     </div>
                 </div>
             </div>
@@ -87,9 +210,9 @@
                     <p>A farming adventure where every choice matters and every garden tells a story.</p>
                 </div>
                 <div class="what-is-content">
-                    <p>Garden Horizons is a Roblox farming experience that combines strategic planning with dynamic gameplay. Start with nothing but dirt and seeds, then build your agricultural empire through smart decisions and careful timing.</p>
-                    <p>Unlike traditional farming games, Garden Horizons features a living economy with timed shop restocks, unpredictable weather events that affect crop growth, and rare mutations that can transform your harvest. Every 5 minutes brings new opportunities as shops refresh their inventory, creating a fast-paced environment where timing is everything.</p>
-                    <p>Track your discoveries in the Flora Diary, compete on global leaderboards, and watch as your small plot transforms into a thriving garden empire.</p>
+                    <p>Garden Horizons is a Roblox farming experience where you choose your plot, plant seeds, and watch crops grow through multiple ripeness stages. Unlike traditional farming games, crops continue to ripen beyond harvest-ready, reaching 'Lush' status for 3x value.</p>
+                    <p>The game features a living economy with 5-minute shop restocks at Bill's Seed Shop and Molly's Gear Shop. Dynamic weather events like Rain (+25% growth), Fog (FOGGY mutations), Storm (+2x growth), and Snow (FROZEN mutations) constantly change your strategy.</p>
+                    <p>Discover real botanical knowledge in your Flora Diary - learn that tomatoes are actually berries, not vegetables! Compete on global leaderboards, complete daily and weekly quests, and build your agricultural empire from a simple plot of dirt.</p>
                 </div>
             </div>
         </section>
@@ -103,18 +226,18 @@
                 <div class="steps-container">
                     <div class="step-card">
                         <div class="step-number">1</div>
-                        <h3>Plant & Tend</h3>
-                        <p>Grab your Watering Can from Molly, secure fresh seeds from Bill, and start planting in your plot of dirt.</p>
+                        <h3>Choose & Plant</h3>
+                        <p>Select your plot, visit Bill's Seed Shop to buy your first carrot seeds, then plant them in your garden. Use your shovel to prepare the soil.</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">2</div>
-                        <h3>Watch & Adapt</h3>
-                        <p>Keep a close eye on the sky. Leverage weather boosts and pray for those ultra-rare crop mutations!</p>
+                        <h3>Tend & Ripen</h3>
+                        <p>Water your crops with a Watering Can to speed growth. Watch them progress through ripeness stages - harvest early or wait for 'Lush' status (3x value). Weather affects growth speed!</p>
                     </div>
                     <div class="step-card">
                         <div class="step-number">3</div>
-                        <h3>Harvest & Upgrade</h3>
-                        <p>Harvest for profit, upgrade to Basic Sprinklers for automation, and expand your garden horizons.</p>
+                        <h3>Harvest & Expand</h3>
+                        <p>Harvest at peak ripeness, sell at the shop, and reinvest in better seeds and gear. Unlock sprinklers ($15,000) for automation and rare seeds like Banana ($30,000) or Plum ($60,000).</p>
                     </div>
                 </div>
             </div>
@@ -130,22 +253,22 @@
                     <div class="why-card">
                         <div class="why-icon">⚡</div>
                         <h3>Fast-Paced Economy</h3>
-                        <p>5-minute shop cycles keep you engaged. Miss the restock and you might lose out on that rare seed you've been waiting for.</p>
+                        <p>5-minute shop cycles keep you engaged. Rare seeds like Tomato (x3) and Banana sell out instantly. Miss the restock and wait another 5 minutes!</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">📈</div>
+                        <h3>Ripeness Strategy</h3>
+                        <p>Crops have multiple stages: ripe, very ripe, and lush (3x value). Do you harvest early for quick cash or wait for maximum profit? Weather changes everything.</p>
+                    </div>
+                    <div class="why-card">
+                        <div class="why-icon">🎓</div>
+                        <h3>Real Learning</h3>
+                        <p>Your Flora Diary teaches real botanical facts. Discover that tomatoes are berries, learn about carrot origins (Daucus carota), and explore mushroom mycelium networks.</p>
                     </div>
                     <div class="why-card">
                         <div class="why-icon">🎲</div>
-                        <h3>Unpredictable & Unique</h3>
-                        <p>Weather mutations and random events mean no two gardens are ever the same. Your farm is truly yours.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">🏆</div>
-                        <h3>Competitive & Rewarding</h3>
-                        <p>Climb the leaderboards, complete your Flora Diary, and show off your agricultural mastery to the world.</p>
-                    </div>
-                    <div class="why-card">
-                        <div class="why-icon">🆓</div>
-                        <h3>Completely Free</h3>
-                        <p>No paywalls, no premium advantages. Success comes from strategy, timing, and dedication.</p>
+                        <h3>Mutation System</h3>
+                        <p>Weather creates unique mutations: FOGGY (1.2x), FLOODED (1.8x), CHILLED variants. No two gardens are the same - your farm is truly unique.</p>
                     </div>
                 </div>
             </div>
@@ -159,20 +282,29 @@
                 <div class="faq-container">
                     <div class="faq-item">
                         <button class="faq-question">
-                            How often do the shops restock?
+                            How often do shops restock?
                             <span class="icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Both Bill's Seed Shop and Molly's Gear Shop restock every 5 minutes! Make sure to check back frequently to grab rare items like Tomatoes or upgraded Sprinklers before they sell out.</p>
+                            <p>Both Bill's Seed Shop and Molly's Gear Shop restock every 5 minutes. Stock is limited - Tomato seeds might only have x3 available, so check back frequently!</p>
                         </div>
                     </div>
                     <div class="faq-item">
                         <button class="faq-question">
-                            What does the Fog weather do?
+                            What do weather events do?
                             <span class="icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>When the Fog weather event occurs, your crops receive a 1x Growth Boost! More importantly, it gives your crops a chance to mutate into the rare "FOGGY" variant.</p>
+                            <p>Rain gives +25% growth and FLOODED mutations. Fog gives +1x boost and FOGGY mutations. Storm gives +2x boost with rare mutations. Snow slows growth but creates CHILLED variants.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            What is the Lush ripeness stage?
+                            <span class="icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Crops continue ripening beyond harvest-ready. 'Lush' is the peak ripeness stage that gives 3x selling value. You can harvest early or wait for maximum profit.</p>
                         </div>
                     </div>
                     <div class="faq-item">
@@ -181,7 +313,7 @@
                             <span class="icon">+</span>
                         </button>
                         <div class="faq-answer">
-                            <p>Yes! The core game is completely free to play on the Roblox platform. You can earn profits and climb the leaderboards just by tending to your garden.</p>
+                            <p>Yes! The game is completely free. Success comes from timing, strategy, and dedication - no paywalls or premium advantages.</p>
                         </div>
                     </div>
                 </div>
@@ -192,6 +324,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
+                <p>Garden Horizons reached 200,000+ players on launch day and continues to grow!</p>
                 <p>&copy; 2026 Garden Horizons Fan Site. All rights reserved.</p>
                 <p class="disclaimer">
                     <strong>Disclaimer:</strong> This is an unofficial fan and promotional site. We are not affiliated with, endorsed by, or sponsored by Roblox Corporation. "Roblox" is a registered trademark of Roblox Corporation.
