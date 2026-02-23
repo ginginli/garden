@@ -1,0 +1,482 @@
+/* =========================================
+   1. 全局变量与基础重置
+   ========================================= */
+:root {
+    --clr-green-main: #5ec269;
+    --clr-green-hover: #4a9d54;
+    --clr-orange-main: #ff9d3d;
+    --clr-blue-sky: #6bb8e8;
+    --clr-text-light: #ffffff;
+    --clr-text-muted: #d4e5f0;
+    --bg-overlay: rgba(45, 85, 65, 0.75);
+    --bg-glass: rgba(60, 100, 80, 0.65);
+    --border-glass: rgba(255, 255, 255, 0.2);
+    --font-main: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-main);
+    color: var(--clr-text-light);
+    line-height: 1.6;
+    background: linear-gradient(180deg, #87ceeb 0%, #b8e6f5 30%, #d4f1d4 100%);
+    position: relative;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('image_a991b9.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.25;
+    z-index: -2;
+}
+
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(ellipse at top, rgba(107, 184, 232, 0.15) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom, rgba(94, 194, 105, 0.12) 0%, transparent 50%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.text-green { color: var(--clr-green-main); }
+.text-orange { color: var(--clr-orange-main); }
+
+/* =========================================
+   2. 按钮组件
+   ========================================= */
+.btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--clr-green-main);
+    color: #ffffff;
+    box-shadow: 0 4px 0 var(--clr-green-hover);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-green-hover);
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 var(--clr-green-hover);
+}
+
+.btn-large {
+    padding: 16px 40px;
+    font-size: 1.125rem;
+    border-radius: 12px;
+}
+
+/* =========================================
+   3. 顶部导航栏 (Header)
+   ========================================= */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(60, 100, 80, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-glass);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 16px 0;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-menu a {
+    color: var(--clr-text-light);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--clr-green-main);
+}
+
+/* =========================================
+   4. 区块公共样式 & 首屏 (Hero)
+   ========================================= */
+.section-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.section-header p {
+    font-size: 1.125rem;
+    color: var(--clr-text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.hero-card {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 24px;
+    padding: 64px 48px;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.3),
+                0 0 80px rgba(94, 194, 105, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.hero-card h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.badge {
+    display: inline-block;
+    background: rgba(94, 194, 105, 0.25);
+    color: var(--clr-green-main);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-bottom: 24px;
+    border: 2px solid rgba(94, 194, 105, 0.5);
+    box-shadow: 0 0 20px rgba(94, 194, 105, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.hero-card p {
+    font-size: 1.25rem;
+    color: var(--clr-text-muted);
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* =========================================
+   5. 游戏特色 (Features)
+   ========================================= */
+.features-section {
+    padding: 100px 0;
+    position: relative;
+    z-index: 10;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.feature-card {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 40px 32px;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(94, 194, 105, 0.6);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3),
+                0 0 60px rgba(94, 194, 105, 0.2);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.feature-card p {
+    color: var(--clr-text-muted);
+}
+
+.shop-status {
+    margin-top: 24px;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.shop-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.shop-item:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.shop-item strong {
+    display: block;
+    color: #fff;
+    font-size: 1.05rem;
+}
+
+.stock-list {
+    display: block;
+    font-size: 0.85rem;
+    color: #94a3b8;
+    margin-top: 4px;
+}
+
+.timer-badge {
+    background: rgba(94, 194, 105, 0.25);
+    color: var(--clr-green-main);
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: monospace;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 2px solid rgba(94, 194, 105, 0.5);
+    min-width: 70px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(94, 194, 105, 0.3);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.timer-badge.text-orange {
+    color: var(--clr-orange-main);
+    background: rgba(255, 157, 61, 0.25);
+    border-color: rgba(255, 157, 61, 0.5);
+    box-shadow: 0 0 15px rgba(255, 157, 61, 0.3);
+}
+
+/* =========================================
+   6. 玩法指南 (How to Play)
+   ========================================= */
+.how-to-section {
+    padding: 100px 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.2), transparent);
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.step-card {
+    text-align: center;
+    padding: 32px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    border: 1px solid var(--border-glass);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--clr-orange-main), #ffb366);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    box-shadow: 0 0 30px rgba(255, 157, 61, 0.5);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.step-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+.step-card p {
+    color: var(--clr-text-muted);
+}
+
+/* =========================================
+   7. FAQ (常见问题解答)
+   ========================================= */
+.faq-section {
+    padding: 100px 0;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.faq-item {
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    padding: 24px;
+    text-align: left;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: inherit;
+    transition: background 0.3s ease;
+}
+
+.faq-question:hover {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.faq-question .icon {
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+    color: var(--clr-green-main);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.faq-answer p {
+    padding: 0 24px 24px 24px;
+    color: var(--clr-text-muted);
+}
+
+/* 手风琴展开状态 */
+.faq-item.active .faq-answer {
+    max-height: 200px; /* 足够容纳文本的高度 */
+}
+
+.faq-item.active .faq-question .icon {
+    transform: rotate(45deg);
+}
+
+/* =========================================
+   8. 页脚 (Footer) & 响应式适配
+   ========================================= */
+.footer {
+    padding: 40px 0;
+    border-top: 2px solid var(--border-glass);
+    background: rgba(45, 85, 65, 0.85);
+    text-align: center;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.footer-content p {
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.footer-content .disclaimer {
+    font-size: 0.8rem;
+    color: #64748b;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .hero-card { padding: 40px 24px; }
+    .hero-card h1 { font-size: 2.5rem; }
+    .hero-card p { font-size: 1.1rem; }
+    .section-header h2 { font-size: 2rem; }
+}
