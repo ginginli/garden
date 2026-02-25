@@ -887,7 +887,7 @@ body::before {
 .code-copy {
     display: flex;
     gap: 12px;
-    margin-bottom: 16px;
+    margin-bottom: 0;
 }
 
 .code-input {
@@ -907,13 +907,15 @@ body::before {
     background: rgba(132, 192, 97, 0.25);
     border: 2px solid rgba(132, 192, 97, 0.5);
     border-radius: 12px;
-    padding: 12px 24px;
+    padding: 12px 20px;
     color: var(--clr-green-main);
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: var(--font-main);
     font-size: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .btn-copy:hover {
