@@ -1007,3 +1007,433 @@ body::before {
 .codes-cta {
     text-align: center;
 }
+
+/* =========================================
+   Stock Page Styles
+   ========================================= */
+.stock-hero-section {
+    padding: 140px 0 60px;
+    text-align: center;
+}
+
+.stock-hero-section .section-header h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.stock-main-section {
+    padding: 40px 0 80px;
+}
+
+.stock-status-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 16px;
+    padding: 20px 32px;
+    margin-bottom: 40px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.status-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    position: relative;
+}
+
+.status-indicator.live {
+    background: var(--clr-green-main);
+    box-shadow: 0 0 20px rgba(132, 192, 97, 0.6);
+    animation: pulse-indicator 2s infinite;
+}
+
+@keyframes pulse-indicator {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+.status-text {
+    font-weight: 700;
+    color: var(--clr-green-main);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.status-label {
+    color: var(--clr-text-muted);
+    font-size: 0.9rem;
+}
+
+.status-value {
+    color: #fff;
+    font-weight: 600;
+}
+
+.status-timer {
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--clr-green-main);
+    text-shadow: 0 0 15px rgba(132, 192, 97, 0.5);
+}
+
+.stock-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+.stock-card {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.stock-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--border-glass);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.card-icon {
+    font-size: 1.5rem;
+}
+
+.card-title h2 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin: 0;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-label {
+    font-size: 0.85rem;
+    color: var(--clr-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.stock-items-container {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.stock-item-card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    transition: all 0.3s ease;
+}
+
+.stock-item-card:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateX(4px);
+    border-color: rgba(132, 192, 97, 0.3);
+}
+
+.stock-item-card.loading {
+    animation: skeleton-loading 1.5s infinite;
+}
+
+@keyframes skeleton-loading {
+    0%, 100% {
+        opacity: 0.6;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+.item-image-placeholder {
+    width: 68px;
+    height: 68px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+    flex-shrink: 0;
+}
+
+.item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.item-name-placeholder {
+    height: 20px;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.item-price-placeholder {
+    height: 16px;
+    width: 40%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 4px;
+}
+
+.item-quantity-placeholder {
+    width: 60px;
+    height: 32px;
+    background: rgba(132, 192, 97, 0.2);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.weather-section {
+    margin-bottom: 60px;
+}
+
+.weather-card-expanded {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.weather-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--border-glass);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.weather-title {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.weather-icon-large {
+    font-size: 3rem;
+}
+
+.weather-title h3 {
+    font-size: 1rem;
+    color: var(--clr-text-muted);
+    margin: 0 0 4px 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.weather-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--clr-green-main);
+    text-transform: capitalize;
+}
+
+.weather-toggle {
+    background: none;
+    border: none;
+    color: var(--clr-text-muted);
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.weather-toggle:hover {
+    color: #fff;
+}
+
+.weather-details {
+    padding: 24px 32px;
+    display: flex;
+    gap: 32px;
+}
+
+.weather-detail-item {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.weather-detail-item strong {
+    display: block;
+    color: var(--clr-text-muted);
+    font-size: 0.85rem;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.weather-detail-item span {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.stock-features-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.15), transparent);
+}
+
+.stock-what-is-section {
+    padding: 80px 0;
+}
+
+.stock-how-to-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.15), transparent);
+}
+
+.stock-why-section {
+    padding: 80px 0;
+}
+
+.stock-faq-section {
+    padding: 80px 0 100px;
+}
+
+@media (max-width: 1024px) {
+    .stock-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stock-status-bar {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+    
+    .weather-details {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .stock-hero-section .section-header h1 {
+        font-size: 2rem;
+    }
+    
+    .stock-status-bar {
+        padding: 16px 20px;
+    }
+    
+    .stock-card-header {
+        padding: 20px;
+    }
+    
+    .stock-items-container {
+        padding: 16px;
+    }
+    
+    .weather-header {
+        padding: 20px;
+    }
+    
+    .weather-details {
+        padding: 20px;
+    }
+}
+
+/* Coming Soon Notice */
+.coming-soon-notice {
+    background: linear-gradient(135deg, rgba(132, 192, 97, 0.2), rgba(255, 157, 61, 0.2));
+    border: 2px solid rgba(132, 192, 97, 0.4);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(132, 192, 97, 0.2);
+}
+
+.notice-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.notice-content h3 {
+    font-size: 1.5rem;
+    color: var(--clr-green-main);
+    margin: 0 0 8px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.notice-content p {
+    font-size: 1.05rem;
+    color: var(--clr-text-light);
+    margin: 0;
+    line-height: 1.6;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+    .coming-soon-notice {
+        flex-direction: column;
+        text-align: center;
+        padding: 24px;
+    }
+    
+    .notice-content h3 {
+        font-size: 1.25rem;
+    }
+    
+    .notice-content p {
+        font-size: 0.95rem;
+    }
+}
