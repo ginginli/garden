@@ -29,7 +29,7 @@
 
 1. 在 Bot 页面，找到 **"TOKEN"** 部分
 2. 点击 **"Reset Token"**（如果是第一次，点击 "Copy"）
-3. 复制显示的 Token（类似：`MTIzNDU2Nzg5MDEyMzQ1Njc4OQ.GhIjKl.MnOpQrStUvWxYzAbCdEfGhIjKlMnOpQrStUv`）
+3. 复制显示的 Token（一串长字符串）
 4. ⚠️ **重要：保存好这个 Token，不要分享给任何人！**
 
 ## 第五步：邀请 Bot 到你的服务器
