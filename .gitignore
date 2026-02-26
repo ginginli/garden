@@ -1,6 +1,10 @@
 # Streamlit secrets - DO NOT COMMIT
 .streamlit/secrets.toml
 
+# Discord Bot credentials - DO NOT COMMIT
+credentials.json
+.env
+
 # Python
 __pycache__/
 *.py[cod]
