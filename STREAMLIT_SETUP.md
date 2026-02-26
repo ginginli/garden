@@ -7,7 +7,7 @@
 3. 输入以下配置（替换成你的 Google Sheet URL）：
 
 ```toml
-[connections.gsheets]
+[gsheets]
 spreadsheet = "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit"
 ```
 
