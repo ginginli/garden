@@ -3,6 +3,8 @@
 # 常规搜索引擎规则
 User-agent: *
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 Disallow: /admin/
 Disallow: /private/
 
@@ -10,7 +12,7 @@ Disallow: /private/
 Sitemap: https://gardenhorizons.org/sitemap.xml
 
 # ==========================================
-# AI 爬虫特定规则
+# AI 爬虫特定规则 - 所有 AI 都可访问 llms 文件
 # ==========================================
 
 # OpenAI GPT
@@ -35,101 +37,139 @@ User-agent: GoogleOther
 User-agent: Gemini
 User-agent: Bard
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Perplexity AI
 User-agent: PerplexityBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Meta AI
 User-agent: FacebookBot
 User-agent: Meta-ExternalAgent
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Common Crawl
 User-agent: CCBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Cohere AI
 User-agent: cohere-ai
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Diffbot
 User-agent: Diffbot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Omgili
 User-agent: omgili
 User-agent: omgilibot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # DuckDuckGo AI
 User-agent: DuckAssistBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Apple AI
 User-agent: Applebot-Extended
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Bytedance (TikTok)
 User-agent: Bytespider
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Yandex
 User-agent: YandexBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Baidu
 User-agent: Baiduspider
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # AI2 (Allen Institute)
 User-agent: AI2Bot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Amazon AI
 User-agent: Amazonbot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Bing AI
 User-agent: bingbot
 Allow: /
-
-# Claude AI (additional)
-User-agent: ClaudeBot
-Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Hugging Face
 User-agent: HuggingFaceBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Inflection AI (Pi)
 User-agent: InflectionBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Mistral AI
 User-agent: MistralBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Stability AI
 User-agent: StabilityBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # You.com
 User-agent: YouBot
 Allow: /
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # Scrapy (通常用于数据抓取，可选择禁止)
 User-agent: Scrapy
 Disallow: /
 
 # ==========================================
-# 允许 AI 爬虫访问的路径
+# 允许所有 AI 爬虫访问的路径
 # ==========================================
 Allow: /
 Allow: /stock/
 Allow: /codes/
 Allow: /secrets/
 Allow: /sitemap.xml
+Allow: /llms.txt
+Allow: /llms-full.txt
 
 # 不允许访问的路径
 Disallow: /admin/
