@@ -1,4 +1,97 @@
+# robots.txt - Garden Horizons
+
+# 常规搜索引擎规则
 User-agent: *
 Allow: /
+Disallow: /admin/
+Disallow: /private/
 
+# 网站地图
 Sitemap: https://gardenhorizons.org/sitemap.xml
+
+# ==========================================
+# AI 爬虫特定规则
+# ==========================================
+
+# OpenAI GPT
+User-agent: GPTBot
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic Claude
+User-agent: Claude-Web
+User-agent: anthropic-ai
+User-agent: Anthropic-AI
+Allow: /
+
+# Google AI
+User-agent: Google-Extended
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Common Crawl
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot
+User-agent: Diffbot
+Allow: /
+
+# Omgili
+User-agent: omgili
+User-agent: omgilibot
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
+Allow: /
+
+# Apple AI
+User-agent: Applebot-Extended
+Allow: /
+
+# Bytedance (TikTok)
+User-agent: Bytespider
+Allow: /
+
+# Yandex
+User-agent: YandexBot
+Allow: /
+
+# Baidu
+User-agent: Baiduspider
+Allow: /
+
+# AI2 (Allen Institute)
+User-agent: AI2Bot
+Allow: /
+
+# Scrapy (通常用于数据抓取，可选择禁止)
+User-agent: Scrapy
+Disallow: /
+
+# ==========================================
+# 允许 AI 爬虫访问的路径
+# ==========================================
+Allow: /
+Allow: /stock/
+Allow: /codes/
+Allow: /secrets/
+Allow: /sitemap.xml
+
+# 不允许访问的路径
+Disallow: /admin/
+Disallow: /private/
