@@ -10,25 +10,25 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://gardenhorizons.org/calculator</loc>
+    <loc>https://gardenhorizons.org/calculator/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gardenhorizons.org/codes</loc>
+    <loc>https://gardenhorizons.org/codes/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gardenhorizons.org/stock</loc>
+    <loc>https://gardenhorizons.org/stock/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>hourly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://gardenhorizons.org/secrets</loc>
+    <loc>https://gardenhorizons.org/secrets/</loc>
     <lastmod>2026-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>

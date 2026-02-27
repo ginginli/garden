@@ -164,6 +164,7 @@ Disallow: /
 # 允许所有 AI 爬虫访问的路径
 # ==========================================
 Allow: /
+Allow: /calculator/
 Allow: /stock/
 Allow: /codes/
 Allow: /secrets/
