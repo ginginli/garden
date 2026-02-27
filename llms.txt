@@ -1,0 +1,45 @@
+# Garden Horizons
+
+> Garden Horizons is the ultimate Roblox farming experience with 5-minute shop cycles, dynamic weather, crop mutations, and real botanical learning. This fan site provides live stock tracking, active codes, hidden secrets, and comprehensive guides for players.
+
+Garden Horizons reached 200,000+ players on launch day. Our site helps players maximize their farming efficiency with real-time shop inventory updates, working redemption codes, and detailed game mechanics guides.
+
+## Core Content
+- [Home](https://gardenhorizons.org/)：Complete overview of Garden Horizons gameplay, features, and getting started guide
+- [Live Stock Tracker](https://gardenhorizons.org/stock)：Real-time inventory updates for Bill's Seed Shop and Molly's Gear Shop with 5-minute restock cycles
+- [Active Codes](https://gardenhorizons.org/codes)：Working redemption codes for free Shillings, seeds, and gear - updated daily
+- [Hidden Secrets](https://gardenhorizons.org/secrets)：Easter eggs, secret locations, morse code messages, and community theories about future updates
+
+## Game Mechanics
+- 5-Minute Shop Restocks：Both Bill's Seeds and Molly's Gear restock every 5 minutes with limited quantities
+- Dynamic Weather System：Rain (+25% growth), Fog (FOGGY mutations), Storm (+2x growth), Snow (CHILLED variants)
+- Ripeness Stages：Crops continue ripening beyond harvest-ready, reaching 'Lush' status for 3x selling value
+- Crop Mutations：Weather-dependent mutations like FOGGY (1.2x), FLOODED (1.8x), and CHILLED variants
+- Flora Diary：Real botanical knowledge system teaching facts about plants
+
+## Active Codes (Updated 2026-02-27)
+- RELEASE：2500 Shillings + 15x Carrot Seeds + 3x Corn Seeds
+- DAWN：1x Dawnfruit Seed (rare)
+- GIFT：1x Cabbage Seed + 1x of every Sprinkler
+- 358：2000 Shillings (secret code)
+
+## Shop Information
+- Bill's Seed Shop：Sells seeds from Carrot ($50) to rare Plum ($60,000)
+- Molly's Gear Shop：Sells tools from Watering Can to Super Sprinkler ($15,000)
+- Stock Rarity：Common, Uncommon, Rare seeds with limited quantities per restock
+- Shared Inventory：Stock is shared across all servers
+
+## Hidden Secrets & Easter Eggs
+- Fountain Launch Glitch：Jump on center fountain to fly into the air
+- IGMA Device：Morse code device on hill translating to "THEY ARE COMING"
+- Secret Laboratory：Hidden room with glowing potion flask behind Cell Shop
+- Plot 3 Cave：Mysterious blocked cave that previously contained a secret rose
+- Magnifying Glasses：Transparent objects found in multiple secret locations
+- Hidden Bench：Peaceful cave spot for hanging out with friends
+
+## Resources
+- [Play Garden Horizons](https://www.roblox.com/games/130594398886540/Garden-Horizons)：Official Roblox game link
+- [Sitemap](https://gardenhorizons.org/sitemap.xml)：Complete site structure
+
+## About
+Garden Horizons Fan Site is an unofficial community resource providing real-time stock tracking, active codes, and comprehensive guides. We are not affiliated with Roblox Corporation. The site helps players maximize their farming efficiency and discover hidden content.

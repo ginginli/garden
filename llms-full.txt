@@ -1,0 +1,434 @@
+# Garden Horizons - Complete Guide
+
+> Garden Horizons is the ultimate Roblox farming experience featuring 5-minute shop cycles, dynamic weather systems, crop mutations, and real botanical learning through the Flora Diary. This comprehensive fan site provides live stock tracking, active redemption codes, hidden secrets, and detailed game mechanics guides to help players maximize their farming efficiency.
+
+Garden Horizons launched with 200,000+ players on day one and continues to grow as one of Roblox's most popular farming games. Our fan site serves the community by providing real-time shop inventory updates, working codes updated daily, secret location guides, and comprehensive gameplay strategies.
+
+## Complete Game Overview
+
+### What is Garden Horizons?
+Garden Horizons is a Roblox farming experience where players start with a plot of dirt and a handful of seeds. The game features a unique ripeness system where crops continue to ripen beyond harvest-ready, reaching 'Lush' status for 3x selling value. Unlike traditional farming games, Garden Horizons combines fast-paced economy (5-minute shop cycles), dynamic weather effects, crop mutations, and real botanical education.
+
+### Core Gameplay Loop
+1. Purchase seeds from Bill's Seed Shop (restocks every 5 minutes)
+2. Plant seeds in your plot and water them with Watering Can
+3. Watch crops progress through ripeness stages: ripe → very ripe → lush (3x value)
+4. Harvest at optimal ripeness based on weather conditions
+5. Sell crops and reinvest in better seeds and gear
+6. Unlock Flora Diary entries with real botanical facts
+7. Compete on global leaderboards and complete quests
+
+## Live Stock Tracking System
+
+### How Stock Works
+Both Bill's Seed Shop and Molly's Gear Shop restock simultaneously every 5 minutes on the dot. Stock is limited and shared across all servers - rare seeds like Tomato (x3 quantity) and Banana sell out within seconds. Our live stock tracker pulls data directly from the official Garden Horizons Discord server, displaying updates within seconds of each restock cycle.
+
+### Shop Inventory Details
+
+#### Bill's Seed Shop
+- Carrot Seeds: $50 (Common, always available)
+- Wheat Seeds: $100 (Common)
+- Potato Seeds: $200 (Common)
+- Onion Seeds: $500 (Uncommon)
+- Cabbage Seeds: $1,000 (Uncommon)
+- Beetroot Seeds: $2,000 (Uncommon)
+- Corn Seeds: $5,000 (Rare)
+- Tomato Seeds: $10,000 (Rare, limited x3)
+- Mushroom Spores: $15,000 (Rare)
+- Strawberry Seeds: $20,000 (Rare)
+- Rose Seeds: $25,000 (Rare)
+- Banana Seeds: $30,000 (Very Rare)
+- Cherry Seeds: $40,000 (Very Rare)
+- Apple Seeds: $50,000 (Very Rare)
+- Plum Seeds: $60,000 (Very Rare)
+
+#### Molly's Gear Shop
+- Watering Can: Starting tool (free)
+- Favorite Tool: Faster watering
+- Harvest Bell: Harvest all crops at once
+- Basic Sprinkler: $5,000 (auto-water small area)
+- Turbo Sprinkler: $10,000 (faster watering)
+- Super Sprinkler: $15,000 (auto-water large area)
+
+### Stock Tracking Features
+- Real-time updates every 5 minutes
+- Countdown timer to next restock
+- Rarity-based sorting (rarest items at top)
+- Quantity indicators for limited stock
+- Live YouTube stream integration
+- Mobile-friendly responsive design
+
+## Active Redemption Codes
+
+### Current Working Codes (Updated 2026-02-27)
+
+**RELEASE**
+- Rewards: 2500 Shillings + 15x Carrot Seeds + 3x Corn Seeds
+- Status: Active
+- Description: Launch celebration code for all players
+
+**DAWN**
+- Rewards: 1x Dawnfruit Seed (rare exclusive seed)
+- Status: Active
+- Requirement: Must be redeemed to unlock this unique seed
+- Description: Special code for Dawnfruit, a rare mutation seed
+
+**GIFT**
+- Rewards: 1x Cabbage Seed + 1x of every Sprinkler type
+- Status: Active
+- Description: Complete sprinkler collection including Basic, Turbo, and Super Sprinklers
+
+**358**
+- Rewards: 2000 Shillings
+- Status: Active
+- Description: Secret code discovered in Discord server (posted as "???")
+
+### How to Redeem Codes
+1. Launch Garden Horizons on Roblox
+2. Click the "Codes" button in the game menu
+3. Enter the code exactly as shown (case-sensitive)
+4. Click "Redeem" to claim your rewards
+5. Rewards appear instantly in your inventory
+
+### Code Tips
+- Codes are case-sensitive - copy exactly as shown
+- Codes can expire without notice - redeem immediately
+- Each code can only be used once per account
+- Check back daily for new codes
+- Join Discord for instant code notifications
+
+## Dynamic Weather System
+
+### Weather Types & Effects
+
+**Clear Weather (Default)**
+- No special effects
+- Normal growth speed
+- Standard crop values
+- Most common weather condition
+
+**Rain**
+- Effect: +25% growth speed
+- Mutation: FLOODED variants (1.8x value multiplier)
+- Duration: 10-15 minutes typically
+- Strategy: Plant fast-growing crops to maximize bonus
+
+**Fog**
+- Effect: +1x growth boost
+- Mutation: FOGGY variants (1.2x value multiplier)
+- Visual: Reduced visibility across map
+- Strategy: Good for medium-value crops
+
+**Storm**
+- Effect: +2x growth speed (double growth!)
+- Mutation: Rare storm mutations
+- Duration: 5-10 minutes (rare weather)
+- Strategy: Plant expensive seeds immediately for maximum profit
+
+**Snow**
+- Effect: -25% growth speed (slower)
+- Mutation: CHILLED/FROZEN variants
+- Visual: Snow covers the ground
+- Strategy: Wait it out or plant long-growth crops
+
+### Weather Strategy Tips
+- Check weather before planting expensive seeds
+- Storm weather = best time for rare seed planting
+- Snow weather = good time to reorganize farm
+- Weather changes every 15-30 minutes
+- Mutations only occur during specific weather
+- FLOODED mutations are most profitable (1.8x)
+
+## Crop Ripeness System
+
+### Ripeness Stages
+1. **Planted**: Seed just placed in ground
+2. **Sprouting**: First growth stage visible
+3. **Growing**: Mid-growth stage
+4. **Ripe**: Ready to harvest (1x value)
+5. **Very Ripe**: Continued ripening (2x value)
+6. **Lush**: Peak ripeness (3x value) - MAXIMUM PROFIT
+
+### Harvest Strategy
+- Early Harvest (Ripe): Quick cash flow, lower profit
+- Medium Harvest (Very Ripe): Balanced approach
+- Late Harvest (Lush): Maximum profit, requires patience
+- Weather Consideration: Storm = harvest early for next planting
+- Mutation Chance: Longer growth = higher mutation chance
+
+### Growth Times (Approximate)
+- Carrot: 2 minutes
+- Wheat: 3 minutes
+- Potato: 4 minutes
+- Corn: 8 minutes
+- Tomato: 10 minutes
+- Banana: 15 minutes
+- Plum: 20 minutes
+
+## Hidden Secrets & Easter Eggs
+
+### 1. Fountain Launch Glitch
+**Location**: Center fountain at spawn area
+**Difficulty**: Easy
+**How to Access**:
+1. Go to the fountain in center of spawn
+2. Jump onto the center platform
+3. You'll be launched into the air
+4. Advanced: Press space right as you land to stay airborne
+
+**Details**: This is the most well-known secret in Garden Horizons. Players can repeatedly jump on the fountain for fun. Some players have discovered a glitch that allows staying airborne indefinitely by timing the space bar press perfectly.
+
+### 2. The Mysterious Cave (Plot 3)
+**Location**: Left side of Plot 3
+**Difficulty**: Medium
+**How to Access**:
+1. Navigate to Plot 3
+2. Walk to the left side of the plot
+3. Find the cave with blocked entrance
+4. Use /e dance2 emote near the corner
+5. Enable shift lock and glitch through the wall
+
+**Mystery**: This cave previously contained a secret rose that has been removed in recent updates. The rose's purpose and why it was removed remains unknown. Some players theorize it was a hint for future content that was changed during development.
+
+### 3. IGMA Trans-Receiver Device ⭐ FEATURED
+**Location**: Top of hill behind Seed Shop (Plot 3 entrance area)
+**Difficulty**: Hard to Find
+**How to Access**:
+1. Go to spawn area
+2. Head behind the Seed Shop and Cell Shop
+3. Find the Plot 3 entrance
+4. Climb the hill to the very top
+5. You'll find the IGMA device displaying morse code
+
+**Morse Code Translation**: "THEY ARE COMING"
+**Device Text**: "5 BANAN... FIELD TRANS RECEIVER"
+
+**Community Theories**:
+- **Pets System**: Garden Horizons will likely add pets like Grow a Garden
+- **Brain Rot Invasion**: Special event with Brain Rot enemies
+- **Traveling Merchant**: Convoy system bringing potion merchant
+- **Potion Shop**: New NPC selling garden boosts and potions
+
+**Evidence Supporting Potion Theory**:
+- Morse code says "convoy inbound"
+- Secret lab has spilled potion flask
+- Admin mentioned "spilling drink in cave"
+- IGMA device = incoming convoy signal receiver
+
+### 4. Hidden Laboratory ⭐ FEATURED
+**Location**: Behind Cell Shop, near Plot 1 path
+**Difficulty**: Medium
+**How to Access**:
+1. Go to the Cell Shop
+2. Walk down the path toward Plot 1
+3. Find the wall that you can clip through
+4. Walk into the wall to teleport inside
+5. Explore the lab with glowing flask and question marks
+
+**What's Inside**:
+- Barrel with glowing liquid flask on top (green/yellow glow)
+- Mysterious question mark symbols on wall (interactive?)
+- Hidden magnifying glass in corner (very hard to see)
+- Additional rooms behind walls (not accessible yet)
+
+**Popular Theory**: This laboratory is hinting at a future potion shop or garden boost system. The morse code "convoy inbound" combined with the spilled potion suggests a traveling potion merchant will arrive in future updates, similar to the traveling merchant in Grow a Garden.
+
+### 5. Secret Relaxation Spot
+**Location**: Cave behind Cell Shop (same hill as IGMA device)
+**Difficulty**: Medium
+**How to Access**:
+1. Go to where the IGMA device is located
+2. Walk directly behind the Cell Shop
+3. Look for a small crack in the ground
+4. Jump into the crack
+5. You'll find a cozy bench inside
+
+**Purpose**: A peaceful hidden spot perfect for hanging out with friends away from busy farming areas. Also contains a hidden magnifying glass in the corner.
+
+### 6. Mysterious Magnifying Glasses
+**Locations Found**:
+- Inside the secret lab cave (corner, hard to see)
+- At the fountain (transparent, barely visible)
+- Possibly more locations undiscovered
+
+**Theories**:
+- Some players think they're keys, not magnifying glasses
+- Could unlock future content or secret areas
+- Might be related to investigation/quest system
+- Could just be decorative easter eggs for atmosphere
+
+**Description**: These transparent objects are extremely difficult to spot. They appear to be magnifying glasses but some players argue they look more like keys due to their shape. Their purpose remains completely unknown.
+
+### 7. Hidden Discord Code
+**Code**: 358
+**Reward**: 2,000 Shillings
+**Discovery**: Posted in official Discord as just "???" without explanation
+**How to Use**: Enter code in game's redemption menu
+
+### 8. Two-Barrel Mystery Room
+**Location**: Unknown (discovered by community members)
+**Contents**: Two barrels in a hidden room
+**Status**: No morse code or special markings found
+**Help Needed**: If you find this room, share the location!
+
+## Secret Hunting Tips
+
+### Essential Techniques
+1. **Use Shift Lock**: Enable shift lock to look around corners and through walls. Essential for finding hidden entrances and glitching into secret areas.
+
+2. **Try Emotes**: Use /e dance2 and other emotes near walls and corners. Some secret areas require emote glitching to access. The dance2 emote is most commonly used for wall clipping.
+
+3. **Explore Hills**: The hill behind the Seed Shop has multiple secrets including the IGMA device, secret bench, and hidden magnifying glass. Climb to the very top and explore every corner thoroughly.
+
+4. **Check Walls**: Some walls can be walked through! Try walking into suspicious-looking walls, especially near shops and plot entrances. The secret lab entrance is a perfect example.
+
+5. **Look for Visual Glitches**: Transparent objects, unusual textures, or slight gaps in terrain often indicate secret locations.
+
+6. **Join Community**: Discord server members share new discoveries daily. Many secrets were found through community collaboration.
+
+## Flora Diary & Real Learning
+
+### Educational Content
+Garden Horizons teaches real botanical facts through the Flora Diary system. Each crop unlocks educational entries:
+
+- **Tomatoes are Berries**: Botanically classified as berries, not vegetables
+- **Carrot Origins**: Daucus carota, originally from Persia
+- **Mushroom Mycelium**: Underground fungal networks
+- **Wheat History**: One of the first domesticated crops
+- **Potato Facts**: Part of nightshade family
+
+### Progression System
+- Unlock entries by growing and harvesting crops
+- Complete Flora Diary for achievement badges
+- Learn real scientific names and botanical classifications
+- Discover historical facts about crop origins
+- Understand plant biology and growth cycles
+
+## Advanced Farming Strategies
+
+### Beginner Strategy (0-10,000 Shillings)
+1. Start with Carrot seeds ($50) - fastest growth
+2. Water manually with Watering Can
+3. Harvest at Ripe stage for quick cash flow
+4. Reinvest in more Carrot seeds
+5. Gradually upgrade to Wheat ($100) and Potato ($200)
+6. Save for Favorite Tool to speed up watering
+
+### Intermediate Strategy (10,000-50,000 Shillings)
+1. Invest in Corn seeds ($5,000) during Storm weather
+2. Purchase Basic Sprinkler ($5,000) for automation
+3. Wait for Lush stage on valuable crops
+4. Target FLOODED mutations during Rain (1.8x value)
+5. Save for Tomato seeds ($10,000) - high profit margin
+6. Upgrade to Turbo Sprinkler ($10,000)
+
+### Advanced Strategy (50,000+ Shillings)
+1. Purchase Super Sprinkler ($15,000) for full automation
+2. Plant rare seeds (Banana $30,000, Plum $60,000)
+3. Only harvest at Lush stage (3x value)
+4. Time plantings with Storm weather (+2x growth)
+5. Focus on mutation farming for maximum profit
+6. Compete on global leaderboards
+7. Complete daily and weekly quests
+
+### Weather-Based Strategy
+- **Storm Active**: Plant most expensive seeds you can afford
+- **Rain Active**: Plant medium-value seeds for FLOODED mutations
+- **Fog Active**: Good for any planting, decent growth boost
+- **Snow Active**: Wait it out or reorganize farm layout
+- **Clear Weather**: Standard farming, save expensive seeds
+
+### Shop Restock Strategy
+- Set timer for 5-minute intervals
+- Be ready at restock time for rare seeds
+- Tomato seeds (x3) sell out in seconds
+- Banana and Plum seeds are top priority
+- Switch servers if stock is sold out
+- Join Discord for restock notifications
+
+## Community Theories & Future Updates
+
+### Potion Merchant Theory (Most Popular)
+**Evidence**:
+- Morse code: "They are coming" / "Convoy inbound"
+- Glowing potion flask in secret laboratory
+- Admin comment about "spilling drink in cave"
+- IGMA device = convoy signal receiver
+- Similar to Grow a Garden's traveling merchant
+
+**Prediction**: A traveling merchant NPC will arrive every 30-60 minutes selling temporary garden boosts and potions. Possible potion types:
+- Growth Speed Potion (+50% growth for 10 minutes)
+- Mutation Chance Potion (increased mutation probability)
+- Harvest Value Potion (+25% selling price)
+- Weather Control Potion (trigger specific weather)
+
+### Pets Update Theory
+**Evidence**:
+- Pets were huge in Grow a Garden
+- "They are coming" could refer to pets
+- Garden Horizons likely to follow similar progression
+- Pet system would add collection/trading mechanics
+
+**Prediction**: Pets will provide passive bonuses like auto-watering, increased growth speed, or bonus Shillings. Rare pets might be obtained through mutations or special events.
+
+### Lore & Story Theory
+**Evidence**:
+- Removed rose from Plot 3 cave
+- Multiple mysterious devices (IGMA, magnifying glasses)
+- Hidden laboratories with question marks
+- Coordinated secret placement suggests narrative
+
+**Prediction**: All secrets are building toward a larger story or lore system revealing Garden Horizons' backstory. The removed rose might have been a plot point that was changed during development.
+
+### Brain Rot Invasion Theory
+**Evidence**:
+- Brain Rot is trending on Roblox
+- "They are coming" sounds like invasion warning
+- Could be limited-time event
+
+**Prediction**: Special invasion event where players defend gardens from Brain Rot enemies, earning exclusive rewards and mutations.
+
+## Technical Information
+
+### Site Features
+- Real-time stock tracking via YouTube live stream
+- Automatic code updates (checked daily)
+- Mobile-responsive design
+- Fast loading times
+- SEO optimized for "Garden Horizons stock" searches
+- Comprehensive secret location guides
+
+### Site Structure
+- Homepage: Complete game overview and features
+- Live Stock: Real-time shop inventory tracking
+- Codes: Active redemption codes updated daily
+- Secrets: Hidden locations and easter eggs guide
+
+### Updates & Maintenance
+- Codes verified daily
+- Stock tracker updates every 5 minutes
+- Secret discoveries added as found by community
+- Game mechanics updated with each patch
+
+## Contact & Community
+
+### Official Links
+- Roblox Game: https://www.roblox.com/games/130594398886540/Garden-Horizons
+- Official Discord: Join for live stock updates and code notifications
+- Community: 200,000+ active players
+
+### Fan Site Information
+This is an unofficial fan and promotional site for Garden Horizons. We are not affiliated with, endorsed by, or sponsored by Roblox Corporation. "Roblox" is a registered trademark of Roblox Corporation. Garden Horizons is a Roblox experience created by independent developers.
+
+### Site Purpose
+Our mission is to help Garden Horizons players maximize their farming efficiency through:
+- Real-time stock tracking to catch rare seeds
+- Daily code updates for free rewards
+- Comprehensive secret guides for easter egg hunters
+- Detailed game mechanics explanations
+- Community theories and future update predictions
+
+---
+
+Last Updated: 2026-02-27
+Site: https://gardenhorizons.org
