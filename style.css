@@ -1437,3 +1437,115 @@ body::before {
         font-size: 0.95rem;
     }
 }
+
+/* Live Stream Section */
+.live-stream-section {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.stream-header {
+    padding: 24px 32px;
+    border-bottom: 2px solid var(--border-glass);
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.stream-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.live-indicator {
+    width: 12px;
+    height: 12px;
+    background: #ff0000;
+    border-radius: 50%;
+    animation: pulse-live 2s infinite;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+}
+
+@keyframes pulse-live {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.2);
+    }
+}
+
+.stream-title h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.stream-header p {
+    color: var(--clr-text-muted);
+    font-size: 1rem;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.stream-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    background: #000;
+}
+
+.stream-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 768px) {
+    .stream-header {
+        padding: 20px;
+    }
+    
+    .stream-title h3 {
+        font-size: 1.25rem;
+    }
+    
+    .stream-header p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Weather Loading States */
+.weather-name.loading-text {
+    color: var(--clr-text-muted);
+    font-style: italic;
+}
+
+.weather-detail-item.loading {
+    position: relative;
+}
+
+.weather-placeholder {
+    height: 20px;
+    width: 60%;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    animation: skeleton-loading 1.5s infinite;
+}
+
+.weather-detail-item.loading strong {
+    display: block;
+    margin-bottom: 12px;
+}

@@ -41,14 +41,27 @@
 
         <section class="stock-main-section">
             <div class="container">
-                <div class="coming-soon-notice">
-                    <div class="notice-icon">🚀</div>
-                    <div class="notice-content">
-                        <h3>Garden Horizons Stock Tracker Coming Soon!</h3>
-                        <p>We're working hard to bring you real-time Garden Horizons stock updates for Bill's Seeds and Molly's Gear. Check back soon for live Garden Horizons stock tracking!</p>
+                <div class="live-stream-section">
+                    <div class="stream-header">
+                        <div class="stream-title">
+                            <span class="live-indicator"></span>
+                            <h3>🔴 Live Garden Horizons Stock Stream</h3>
+                        </div>
+                        <p>Watch real-time Garden Horizons stock updates directly from the game</p>
+                    </div>
+                    <div class="stream-container">
+                        <iframe 
+                            src="https://www.youtube.com/embed/_EeyX0YBkrE?autoplay=1&mute=1" 
+                            title="Garden Horizons Live Stock Stream" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin" 
+                            allowfullscreen>
+                        </iframe>
                     </div>
                 </div>
-                <div class="stock-status-bar">
+
+                <div class="stock-status-bar" style="display: none;">
                     <div class="status-item">
                         <span class="status-indicator live"></span>
                         <span class="status-text">LIVE</span>
@@ -57,13 +70,9 @@
                         <span class="status-label">Garden Horizons stock restocks every</span>
                         <span class="status-value">5 minutes</span>
                     </div>
-                    <div class="status-item">
-                        <span class="status-label">Next Garden Horizons stock restock:</span>
-                        <span class="status-timer" id="main-timer">5:00</span>
-                    </div>
                 </div>
 
-                <div class="stock-grid">
+                <div class="stock-grid" style="display: none;">
                     <div class="stock-card">
                         <div class="stock-card-header">
                             <div class="card-title">
@@ -141,14 +150,14 @@
                     </div>
                 </div>
 
-                <div class="weather-section">
+                <div class="weather-section" style="display: none;">
                     <div class="weather-card-expanded">
                         <div class="weather-header">
                             <div class="weather-title">
-                                <span class="weather-icon-large" id="weather-icon">☀️</span>
+                                <span class="weather-icon-large">🌤️</span>
                                 <div>
                                     <h3>Current Weather</h3>
-                                    <span class="weather-name" id="weather-name">Sunny</span>
+                                    <span class="weather-name loading-text">Loading...</span>
                                 </div>
                             </div>
                             <button class="weather-toggle" aria-label="Toggle weather details">
@@ -156,13 +165,13 @@
                             </button>
                         </div>
                         <div class="weather-details">
-                            <div class="weather-detail-item">
+                            <div class="weather-detail-item loading">
                                 <strong>Effect:</strong>
-                                <span id="weather-effect">Normal growth rate</span>
+                                <div class="weather-placeholder"></div>
                             </div>
-                            <div class="weather-detail-item">
+                            <div class="weather-detail-item loading">
                                 <strong>Next Change:</strong>
-                                <span class="timer-display" id="weather-timer">15:00</span>
+                                <div class="weather-placeholder"></div>
                             </div>
                         </div>
                     </div>
