@@ -96,7 +96,7 @@ function updatePlantInfo() {
             this.src = '/calculator/images/plants/Placeholder.webp';
         };
         
-        document.getElementById('plantCost').textContent = `${plant.cost.toLocaleString()} coins`;
+        document.getElementById('plantCost').textContent = plant.cost !== null ? `${plant.cost.toLocaleString()} coins` : 'Cost data pending';
         document.getElementById('plantBase').textContent = `${plant.basePrice.toLocaleString()} coins`;
         document.getElementById('plantWeight').textContent = `${plant.baseWeight} kg`;
         info.style.display = 'block';
@@ -268,14 +268,16 @@ function calculate() {
     
     // Official Formula
     const sellPrice = Math.round(plant.basePrice * ripenessMultiplier * mutationMultiplier * weightFactor);
-    const profit = sellPrice - plant.cost;
-    const roi = plant.cost > 0 ? (profit / plant.cost) * 100 : 0;
-    const profitPerHour = profit * (3600 / plant.growTime);
+    const profit = plant.cost !== null ? sellPrice - plant.cost : null;
+    const roi = (plant.cost !== null && plant.cost > 0) ? (profit / plant.cost) * 100 : null;
+    const profitPerHour = profit !== null ? profit * (3600 / plant.growTime) : null;
     
     // Grade calculation
     let grade = 'C';
-    if (roi >= 100) grade = 'A';
-    else if (roi >= 50) grade = 'B';
+    if (roi !== null) {
+        if (roi >= 100) grade = 'A';
+        else if (roi >= 50) grade = 'B';
+    }
     
     // Display results
     displayResults({
@@ -320,9 +322,9 @@ function displayResults(result) {
     document.getElementById('resultSellPrice').textContent = `${result.sellPrice.toLocaleString()} coins`;
     
     // Metrics
-    document.getElementById('resultProfit').textContent = `${result.profit.toLocaleString()} coins`;
-    document.getElementById('resultROI').textContent = `${result.roi.toFixed(1)}%`;
-    document.getElementById('resultProfitHour').textContent = `${Math.round(result.profitPerHour).toLocaleString()} coins/h`;
+    document.getElementById('resultProfit').textContent = result.profit !== null ? `${result.profit.toLocaleString()} coins` : 'Cost data pending';
+    document.getElementById('resultROI').textContent = result.roi !== null ? `${result.roi.toFixed(1)}%` : 'Cost data pending';
+    document.getElementById('resultProfitHour').textContent = result.profitPerHour !== null ? `${Math.round(result.profitPerHour).toLocaleString()} coins/h` : 'Cost data pending';
     
     // Formula breakdown
     displayFormulaBreakdown(result);
