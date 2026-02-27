@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Garden Horizons Calculator - Official profit calculator for Garden Horizons. Calculate crop values, mutations, and ROI using official Wiki formulas. Free Garden Horizons Calculator tool.">
+    <meta name="keywords" content="Garden Horizons calculator, Garden Horizons profit calculator, Garden Horizons crop calculator, mutation calculator, ROI calculator">
+    <link rel="canonical" href="https://gardenhorizons.org/calculator/">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <title>Garden Horizons Calculator | Free Profit & ROI Calculator Tool</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="calculator.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYW046RLDK"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-QYW046RLDK');
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-inner">
+            <a href="/" class="logo">
+                <span class="text-green">Garden</span> <span class="text-orange">Horizons</span>
+            </a>
+            <nav class="nav-menu">
+                <a href="/">Home</a>
+                <a href="/stock">Live Stock</a>
+                <a href="/calculator">Calculator</a>
+                <a href="/codes">Codes</a>
+            </nav>
+            <a href="https://www.roblox.com/games/130594398886540/Garden-Horizons" target="_blank" class="btn btn-primary">Play on Roblox</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" style="min-height: 40vh; padding-top: 100px; padding-bottom: 20px;">
+        <div class="container">
+            <div class="hero-content" style="grid-template-columns: 1fr; text-align: center; padding: 0 24px; gap: 8px;">
+                <div class="hero-text" style="text-align: center;">
+                    <h1 style="font-size: 2.5rem; margin-bottom: 40px; line-height: 1.2;">🧮 Garden Horizons Calculator</h1>
+                    <p style="font-size: 1.15rem; margin-bottom: 40px; line-height: 1.5; color: var(--clr-text-muted);">The most accurate Garden Horizons Calculator for calculating crop profits, mutations, and ROI. <br>Use our free Garden Horizons Calculator to maximize your farming profits!</p>
+                    <div class="hero-badges" style="display: flex; gap: 10px; justify-content: center; flex-wrap: nowrap; margin-bottom: 0;">
+                        <div class="badge" style="padding: 5px 12px; font-size: 0.85rem;">✅ Official Wiki Formula</div>
+                        <div class="badge" style="padding: 5px 12px; font-size: 0.85rem;">🌱 All 26 Plants</div>
+                        <div class="badge" style="padding: 5px 12px; font-size: 0.85rem;">⚡ 16 Mutations</div>
+                        <div class="badge" style="padding: 5px 12px; font-size: 0.85rem;">📊 Real-time Results</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Garden Horizons Calculator Tool</h2>
+                <p>Calculate your Garden Horizons crop profits with our advanced Garden Horizons Calculator</p>
+            </div>
+
+            <div class="calculator-grid">
+                <!-- Left Panel: Inputs -->
+                <div class="calculator-panel">
+                    <div class="panel-section">
+                        <h3>🌱 Select Plant</h3>
+                        <div class="plant-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="Common">Common</button>
+                            <button class="filter-btn" data-filter="Uncommon">Uncommon</button>
+                            <button class="filter-btn" data-filter="Rare">Rare</button>
+                            <button class="filter-btn" data-filter="Epic">Epic</button>
+                            <button class="filter-btn" data-filter="Legendary">Legendary</button>
+                            <button class="filter-btn" data-filter="Special">Special</button>
+                        </div>
+                        <div id="plantList" class="plant-list"></div>
+                        <div id="plantInfo" class="plant-info" style="display: none;">
+                            <div class="plant-image-container">
+                                <img id="plantImage" class="plant-image" src="" alt="Plant">
+                            </div>
+                            <div class="plant-details">
+                                <div class="info-row">
+                                    <span>Seed Cost:</span>
+                                    <span id="plantCost" class="info-value">-</span>
+                                </div>
+                                <div class="info-row">
+                                    <span>Base Price:</span>
+                                    <span id="plantBase" class="info-value">-</span>
+                                </div>
+                                <div class="info-row">
+                                    <span>Base Weight:</span>
+                                    <span id="plantWeight" class="info-value">-</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <h3>🌿 Ripeness Stage</h3>
+                        <div class="stage-buttons">
+                            <button class="stage-btn" data-stage="unripe">
+                                <span class="stage-emoji">🌱</span>
+                                <span class="stage-name">Unripe</span>
+                                <span class="stage-mult">×1.0</span>
+                            </button>
+                            <button class="stage-btn active" data-stage="ripened">
+                                <span class="stage-emoji">🌿</span>
+                                <span class="stage-name">Ripened</span>
+                                <span class="stage-mult">×2.0</span>
+                            </button>
+                            <button class="stage-btn" data-stage="lush">
+                                <span class="stage-emoji">🌳</span>
+                                <span class="stage-name">Lush</span>
+                                <span class="stage-mult">×3.0</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <h3>⚡ Mutations <span class="mutation-count">(0 selected)</span></h3>
+                        <div class="mutation-filter">
+                            <button class="filter-btn active" data-filter="all">All</button>
+                            <button class="filter-btn" data-filter="weather">Weather</button>
+                            <button class="filter-btn" data-filter="combo">Combo</button>
+                            <button class="filter-btn" data-filter="limited">Limited</button>
+                        </div>
+                        <div id="mutationList" class="mutation-list"></div>
+                    </div>
+
+                    <div class="panel-section">
+                        <h3>⚖️ Weight (Optional)</h3>
+                        <div class="weight-input-group">
+                            <input type="number" id="weightInput" class="input-number" placeholder="Auto" step="0.01" min="0.01">
+                            <span class="input-unit">kg</span>
+                        </div>
+                        <p class="input-hint">Leave empty to use base weight. Weight factor: (weight/base)²</p>
+                    </div>
+                </div>
+
+                <!-- Right Panel: Results -->
+                <div class="calculator-panel results-panel">
+                    <div class="result-header">
+                        <h3>📊 Calculation Result</h3>
+                        <button id="clearBtn" class="btn-clear">Clear All</button>
+                    </div>
+
+                    <div id="resultContent" class="result-content">
+                        <div class="result-placeholder">
+                            <span class="placeholder-icon">🌱</span>
+                            <p>Select a plant to start calculating</p>
+                        </div>
+                    </div>
+
+                    <div id="resultDetails" style="display: none;">
+                        <div class="result-card main-result">
+                            <div class="result-grade" id="resultGrade">A</div>
+                            <div class="result-main-value">
+                                <span class="result-label">Final Sell Price</span>
+                                <span class="result-value" id="resultSellPrice">0</span>
+                            </div>
+                        </div>
+
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                                <span class="metric-label">Profit</span>
+                                <span class="metric-value" id="resultProfit">0</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">ROI</span>
+                                <span class="metric-value" id="resultROI">0%</span>
+                            </div>
+                            <div class="metric-card">
+                                <span class="metric-label">Profit/Hour</span>
+                                <span class="metric-value" id="resultProfitHour">0</span>
+                            </div>
+                        </div>
+
+                        <div class="formula-breakdown">
+                            <h4>📐 Formula Breakdown</h4>
+                            <div class="formula-steps" id="formulaSteps"></div>
+                        </div>
+
+                        <div id="recommendations" class="recommendations"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Why Use Our Garden Horizons Calculator?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">✅</div>
+                    <h3>Official Formula</h3>
+                    <p>Our Garden Horizons Calculator uses the official Wiki formula for 100% accurate calculations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>All 26 Plants</h3>
+                    <p>Calculate profits for every plant in Garden Horizons from Carrot to Dawn Blossom</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>16 Mutations</h3>
+                    <p>The Garden Horizons Calculator supports all weather, combo, and limited mutations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>ROI Analysis</h3>
+                    <p>Get instant profit, ROI, and profit-per-hour calculations with our Garden Horizons Calculator</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3>Smart Recommendations</h3>
+                    <p>Receive optimization tips to maximize your Garden Horizons farming profits</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🆓</div>
+                    <h3>100% Free</h3>
+                    <p>Our Garden Horizons Calculator is completely free to use, no registration required</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Is Section -->
+    <section class="what-is-section">
+        <div class="container">
+            <h2 class="section-title">What is the Garden Horizons Calculator?</h2>
+            <div class="content-box">
+                <p>The <strong>Garden Horizons Calculator</strong> is a free online tool designed to help Garden Horizons players calculate crop profits, ROI, and optimal farming strategies. Our Garden Horizons Calculator uses the official Wiki formula to provide accurate sell prices based on plant type, ripeness stage, mutations, and weight.</p>
+                <p>Whether you're a beginner farmer or an experienced Garden Horizons player, this Garden Horizons Calculator helps you make informed decisions about which crops to plant, when to harvest, and how mutations affect your profits. The Garden Horizons Calculator supports all 26 plants and 16 mutations available in the game.</p>
+                <p>Our Garden Horizons Calculator is the most comprehensive profit calculator for Garden Horizons, featuring real-time calculations, detailed formula breakdowns, and smart recommendations to optimize your farming efficiency.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To Section -->
+    <section class="how-to-section">
+        <div class="container">
+            <h2 class="section-title">How to Use the Garden Horizons Calculator</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Select Your Plant</h3>
+                    <p>Choose from 26 available plants in the Garden Horizons Calculator dropdown menu</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Choose Ripeness Stage</h3>
+                    <p>Select Unripe (×1.0), Ripened (×2.0), or Lush (×3.0) in the Garden Horizons Calculator</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Add Mutations</h3>
+                    <p>Click on mutations to add them - the Garden Horizons Calculator multiplies them together</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h3>Adjust Weight (Optional)</h3>
+                    <p>Enter custom weight or use default - the Garden Horizons Calculator applies weight factor automatically</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h3>View Results</h3>
+                    <p>See instant profit, ROI, and recommendations from the Garden Horizons Calculator</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">6</div>
+                    <h3>Optimize Strategy</h3>
+                    <p>Use Garden Horizons Calculator insights to maximize your farming profits</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Section -->
+    <section class="why-section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Garden Horizons Calculator?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <h3>🎯 Accurate Calculations</h3>
+                    <p>The Garden Horizons Calculator uses the exact formula from the official Garden Horizons Wiki, ensuring 100% accurate profit calculations every time.</p>
+                </div>
+                <div class="why-card">
+                    <h3>⚡ Instant Results</h3>
+                    <p>Get real-time calculations as you adjust settings. Our Garden Horizons Calculator provides instant feedback for quick decision-making.</p>
+                </div>
+                <div class="why-card">
+                    <h3>📱 Mobile Friendly</h3>
+                    <p>Use the Garden Horizons Calculator on any device - desktop, tablet, or mobile. Calculate profits anywhere, anytime.</p>
+                </div>
+                <div class="why-card">
+                    <h3>🔄 Always Updated</h3>
+                    <p>Our Garden Horizons Calculator stays current with game updates, ensuring you always have the latest plant and mutation data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Garden Horizons Calculator FAQ</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>How accurate is the Garden Horizons Calculator?</h3>
+                    <p>The Garden Horizons Calculator uses the official Wiki formula with multiplicative mutation stacking, providing 100% accurate calculations that match in-game results.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Does the Garden Horizons Calculator support all plants?</h3>
+                    <p>Yes! The Garden Horizons Calculator includes all 26 plants from Common to Legendary rarity, including special plants from packs and codes.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How do mutations work in the Garden Horizons Calculator?</h3>
+                    <p>The Garden Horizons Calculator multiplies mutations together (not adds them). For example, Foggy (×1.25) + Soaked (×1.2) = ×1.5 total multiplier.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I use the Garden Horizons Calculator for free?</h3>
+                    <p>Absolutely! The Garden Horizons Calculator is 100% free with no registration, ads, or hidden fees. Use it as much as you want!</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What is ROI in the Garden Horizons Calculator?</h3>
+                    <p>ROI (Return on Investment) shows your profit percentage. The Garden Horizons Calculator calculates it as: (Profit ÷ Seed Cost) × 100%.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>How does weight affect the Garden Horizons Calculator results?</h3>
+                    <p>Weight uses a squared formula: (actual weight ÷ base weight)². The Garden Horizons Calculator automatically applies this to your sell price.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Garden Horizons Calculator</h4>
+                    <p>The most accurate and comprehensive Garden Horizons Calculator for profit optimization. Calculate crop values, mutations, and ROI with our free Garden Horizons Calculator tool.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/stock">Live Stock Tracker</a></li>
+                        <li><a href="/calculator">Garden Horizons Calculator</a></li>
+                        <li><a href="/codes">Active Codes</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="https://garden-horizons.fandom.com/wiki/Mutations" target="_blank" rel="noopener">Official Wiki</a></li>
+                        <li><a href="https://www.roblox.com/games/130594398886540/Garden-Horizons" target="_blank" rel="noopener">Play Garden Horizons</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Garden Horizons Calculator. Free profit calculator tool for Garden Horizons players.</p>
+                <p class="disclaimer">This Garden Horizons Calculator uses official Wiki formulas. Not affiliated with the game developers.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="calculator-data.js"></script>
+    <script src="calculator.js"></script>
+</body>
+</html>

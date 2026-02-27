@@ -1,8 +1,8 @@
 # Garden Horizons - Complete Guide
 
-> Garden Horizons is the ultimate Roblox farming experience featuring 5-minute shop cycles, dynamic weather systems, crop mutations, and real botanical learning through the Flora Diary. This comprehensive fan site provides live stock tracking, active redemption codes, hidden secrets, and detailed game mechanics guides to help players maximize their farming efficiency.
+> Garden Horizons is the ultimate Roblox farming experience featuring 5-minute shop cycles, dynamic weather systems, crop mutations, and real botanical learning through the Flora Diary. This comprehensive fan site provides a profit calculator, live stock tracking, active redemption codes, hidden secrets, and detailed game mechanics guides to help players maximize their farming efficiency.
 
-Garden Horizons launched with 200,000+ players on day one and continues to grow as one of Roblox's most popular farming games. Our fan site serves the community by providing real-time shop inventory updates, working codes updated daily, secret location guides, and comprehensive gameplay strategies.
+Garden Horizons launched with 200,000+ players on day one and continues to grow as one of Roblox's most popular farming games. Our fan site serves the community by providing an official formula calculator, real-time shop inventory updates, working codes updated daily, secret location guides, and comprehensive gameplay strategies.
 
 ## Complete Game Overview
 
@@ -17,6 +17,91 @@ Garden Horizons is a Roblox farming experience where players start with a plot o
 5. Sell crops and reinvest in better seeds and gear
 6. Unlock Flora Diary entries with real botanical facts
 7. Compete on global leaderboards and complete quests
+
+## Garden Horizons Calculator
+
+### What is the Calculator?
+The Garden Horizons Calculator is a free online tool that helps players calculate exact crop profits, ROI (Return on Investment), and optimal farming strategies. Using the official Wiki formula, the calculator provides 100% accurate sell prices based on plant type, ripeness stage, mutations, and weight.
+
+### Calculator Features
+- **All 26 Plants**: Calculate profits for every plant from Carrot to Dawn Blossom
+- **Official Wiki Formula**: Uses the exact multiplicative formula: sellPrice = basePrice × ripenessMultiplier × (mutation1 × mutation2 × ...) × (weight/baseWeight)²
+- **16 Mutations**: Supports all weather, combo, and limited mutations with accurate multipliers
+- **Ripeness Stages**: Calculate for Unripe (×1.0), Ripened (×2.0), or Lush (×3.0) stages
+- **ROI Analysis**: Instant profit, ROI percentage, and profit-per-hour calculations
+- **Smart Recommendations**: Get optimization tips to maximize farming profits
+- **Real-time Results**: See calculations update instantly as you adjust settings
+
+### How to Use the Calculator
+1. **Select Plant**: Choose from 26 plants organized by rarity (Common to Legendary)
+2. **Choose Ripeness**: Select Unripe, Ripened, or Lush stage
+3. **Add Mutations**: Click mutations to add them - they multiply together
+4. **Adjust Weight** (Optional): Enter custom weight or use default base weight
+5. **View Results**: See profit, ROI, profit/hour, and detailed formula breakdown
+
+### Understanding the Formula
+The calculator uses the official Garden Horizons Wiki formula:
+
+**Sell Price = Base Price × Ripeness Multiplier × Mutation Multiplier × Weight Factor**
+
+- **Base Price**: Each plant's default selling value
+- **Ripeness Multiplier**: Unripe (1.0×), Ripened (2.0×), Lush (3.0×)
+- **Mutation Multiplier**: Mutations multiply together (e.g., Foggy 1.25× + Soaked 1.2× = 1.5× total)
+- **Weight Factor**: (actual weight ÷ base weight)² - heavier crops sell for more
+
+### Mutation Types
+**Weather Mutations** (8 types):
+- Foggy: ×1.25 (Fog event)
+- Soaked: ×1.2 (Rain event)
+- Flooded: ×1.75 (Rain event)
+- Chilled: ×1.5 (Snowstorm)
+- Snowy: ×2.0 (Snowstorm)
+- Sandy: ×2.5 (Sandstorm)
+- Shocked: ×4.5 (Storm event)
+- Starstruck: ×6.5 (Starfall event)
+
+**Combo Mutations** (3 types):
+- Mossy: ×3.5 (Foggy + Chilled)
+- Muddy: ×5.0 (Sandy + Flooded/Soaked)
+- Frostbit: ×3.5 (Soaked + Snowy)
+
+**Limited Mutations** (5 types):
+- Meteoric: ×10.0 (Meteor Shower)
+- Galactic: ×5.0 (Black Hole event)
+- Nova: ×6.5 (Black Hole event)
+- Tidal: ×2.0 (Tsunami event)
+- Electric: Special (Admin only)
+
+### Example Calculations
+
+**Example 1: Basic Carrot**
+- Plant: Carrot (Cost: 20, Base Price: 30)
+- Ripeness: Ripened (×2.0)
+- Mutations: None
+- Weight: Base (0.07 kg)
+- **Result**: 60 coins sell price, 40 profit, 200% ROI
+
+**Example 2: Lush Tomato with Mutations**
+- Plant: Tomato (Cost: 4,000, Base Price: 60)
+- Ripeness: Lush (×3.0)
+- Mutations: Foggy (×1.25) + Soaked (×1.2) = ×1.5 total
+- Weight: Base (0.15 kg)
+- **Result**: 270 coins sell price, -3,730 profit, -93% ROI
+- **Note**: Some plants need heavy mutations to be profitable
+
+**Example 3: Optimal Cherry Setup**
+- Plant: Cherry (Cost: 1,000,000, Base Price: 8,000)
+- Ripeness: Lush (×3.0)
+- Mutations: Starstruck (×6.5) + Shocked (×4.5) = ×29.25 total
+- Weight: 2x base (0.02 kg)
+- **Result**: 5,616,000 coins, 4,616,000 profit, 462% ROI
+
+### Calculator Tips
+- **Wait for Lush**: Always wait for Lush stage (×3.0) for maximum profit
+- **Stack Mutations**: Mutations multiply together - combine multiple for huge bonuses
+- **Check ROI**: Focus on plants with high ROI percentage, not just high sell price
+- **Weather Strategy**: Plant expensive seeds during Storm/Starfall for best mutations
+- **Weight Matters**: Heavier crops use squared formula - small weight increases = big profit gains
 
 ## Live Stock Tracking System
 
@@ -400,6 +485,7 @@ Garden Horizons teaches real botanical facts through the Flora Diary system. Eac
 
 ### Site Structure
 - Homepage: Complete game overview and features
+- Calculator: Profit calculator with official Wiki formulas
 - Live Stock: Real-time shop inventory tracking
 - Codes: Active redemption codes updated daily
 - Secrets: Hidden locations and easter eggs guide

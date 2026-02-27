@@ -6,6 +6,7 @@ Garden Horizons reached 200,000+ players on launch day. Our site helps players m
 
 ## Core Content
 - [Home](https://gardenhorizons.org/)：Complete overview of Garden Horizons gameplay, features, and getting started guide
+- [Calculator](https://gardenhorizons.org/calculator)：Official profit calculator for calculating crop values, mutations, and ROI using Wiki formulas
 - [Live Stock Tracker](https://gardenhorizons.org/stock)：Real-time inventory updates for Bill's Seed Shop and Molly's Gear Shop with 5-minute restock cycles
 - [Active Codes](https://gardenhorizons.org/codes)：Working redemption codes for free Shillings, seeds, and gear - updated daily
 - [Hidden Secrets](https://gardenhorizons.org/secrets)：Easter eggs, secret locations, morse code messages, and community theories about future updates

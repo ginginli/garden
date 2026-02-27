@@ -1,0 +1,40 @@
+# Garden Horizons Plant Images Download List
+# Visit each URL and save the seed/produce images
+
+# Common Plants
+https://garden-horizons.fandom.com/wiki/Carrot
+https://garden-horizons.fandom.com/wiki/Corn
+https://garden-horizons.fandom.com/wiki/Dandelion
+https://garden-horizons.fandom.com/wiki/Sunpetal
+
+# Uncommon Plants
+https://garden-horizons.fandom.com/wiki/Onion
+https://garden-horizons.fandom.com/wiki/Strawberry
+https://garden-horizons.fandom.com/wiki/Mushroom
+https://garden-horizons.fandom.com/wiki/Bell_Pepper
+https://garden-horizons.fandom.com/wiki/Goldenberry
+
+# Rare Plants
+https://garden-horizons.fandom.com/wiki/Beetroot
+https://garden-horizons.fandom.com/wiki/Tomato
+https://garden-horizons.fandom.com/wiki/Apple
+https://garden-horizons.fandom.com/wiki/Rose
+https://garden-horizons.fandom.com/wiki/Amberpine
+https://garden-horizons.fandom.com/wiki/Birch
+
+# Epic Plants
+https://garden-horizons.fandom.com/wiki/Wheat
+https://garden-horizons.fandom.com/wiki/Banana
+https://garden-horizons.fandom.com/wiki/Plum
+https://garden-horizons.fandom.com/wiki/Potato
+https://garden-horizons.fandom.com/wiki/Orange
+https://garden-horizons.fandom.com/wiki/Emberwood
+
+# Legendary Plants
+https://garden-horizons.fandom.com/wiki/Cabbage
+https://garden-horizons.fandom.com/wiki/Cherry
+https://garden-horizons.fandom.com/wiki/Olive
+
+# Special Plants
+https://garden-horizons.fandom.com/wiki/Dawn_Fruit
+https://garden-horizons.fandom.com/wiki/Dawn_Blossom
