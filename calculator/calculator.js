@@ -59,7 +59,7 @@ function renderPlantList() {
         if (isSelected) item.classList.add('selected');
         
         item.innerHTML = `
-            <img src="${plant.image}" alt="${plant.name}" class="plant-item-image" onerror="this.src='images/plants/Placeholder.webp'">
+            <img src="${plant.image}" alt="${plant.name}" class="plant-item-image" onerror="this.src='/calculator/images/plants/Placeholder.webp'">
             <div class="plant-item-info">
                 <span class="plant-item-name">${plant.emoji} ${plant.name}</span>
                 <span class="plant-item-rarity">${plant.rarity}</span>
@@ -93,7 +93,7 @@ function updatePlantInfo() {
         plantImage.src = plant.image;
         plantImage.alt = plant.name;
         plantImage.onerror = function() {
-            this.src = 'images/plants/Placeholder.webp';
+            this.src = '/calculator/images/plants/Placeholder.webp';
         };
         
         document.getElementById('plantCost').textContent = `${plant.cost.toLocaleString()} coins`;
