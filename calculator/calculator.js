@@ -96,8 +96,8 @@ function updatePlantInfo() {
             this.src = '/calculator/images/plants/Placeholder.webp';
         };
         
-        document.getElementById('plantCost').textContent = plant.cost !== null ? `${plant.cost.toLocaleString()} coins` : 'Cost data pending';
-        document.getElementById('plantBase').textContent = `${plant.basePrice.toLocaleString()} coins`;
+        document.getElementById('plantCost').textContent = plant.cost !== null ? `${plant.cost.toLocaleString()} Shillings` : 'Cost data pending';
+        document.getElementById('plantBase').textContent = `${plant.basePrice.toLocaleString()} Shillings`;
         document.getElementById('plantWeight').textContent = `${plant.baseWeight} kg`;
         info.style.display = 'block';
     }
@@ -319,12 +319,12 @@ function displayResults(result) {
     if (result.grade === 'B') gradeEl.classList.add('grade-b');
     if (result.grade === 'C') gradeEl.classList.add('grade-c');
     
-    document.getElementById('resultSellPrice').textContent = `${result.sellPrice.toLocaleString()} coins`;
+    document.getElementById('resultSellPrice').textContent = `${result.sellPrice.toLocaleString()} Shillings`;
     
     // Metrics
-    document.getElementById('resultProfit').textContent = result.profit !== null ? `${result.profit.toLocaleString()} coins` : 'Cost data pending';
+    document.getElementById('resultProfit').textContent = result.profit !== null ? `${result.profit.toLocaleString()} Shillings` : 'Cost data pending';
     document.getElementById('resultROI').textContent = result.roi !== null ? `${result.roi.toFixed(1)}%` : 'Cost data pending';
-    document.getElementById('resultProfitHour').textContent = result.profitPerHour !== null ? `${Math.round(result.profitPerHour).toLocaleString()} coins/h` : 'Cost data pending';
+    document.getElementById('resultProfitHour').textContent = result.profitPerHour !== null ? `${Math.round(result.profitPerHour).toLocaleString()} Shillings/h` : 'Cost data pending';
     
     // Formula breakdown
     displayFormulaBreakdown(result);
@@ -339,11 +339,11 @@ function displayFormulaBreakdown(result) {
     const weight = state.customWeight || plant.baseWeight;
     
     const steps = [
-        { label: 'Base Price', value: `${plant.basePrice.toLocaleString()} coins` },
+        { label: 'Base Price', value: `${plant.basePrice.toLocaleString()} Shillings` },
         { label: `Ripeness (${RIPENESS[state.selectedStage].name})`, value: `×${result.ripenessMultiplier.toFixed(1)}` },
         { label: 'Mutations', value: `×${result.mutationMultiplier.toFixed(2)}` },
         { label: 'Weight Factor', value: `×${result.weightFactor.toFixed(2)}` },
-        { label: 'Final Sell Price', value: `${result.sellPrice.toLocaleString()} coins` }
+        { label: 'Final Sell Price', value: `${result.sellPrice.toLocaleString()} Shillings` }
     ];
     
     container.innerHTML = steps.map(step => `
