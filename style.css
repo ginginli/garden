@@ -1549,3 +1549,469 @@ body::before {
     display: block;
     margin-bottom: 12px;
 }
+
+/* =========================================
+   Secrets Page Styles
+   ========================================= */
+.secrets-hero-section {
+    padding: 140px 0 60px;
+    text-align: center;
+}
+
+.secrets-hero-section .section-header h1 {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+.secrets-main-section {
+    padding: 40px 0 80px;
+}
+
+.secrets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 32px;
+    margin-bottom: 60px;
+}
+
+.secret-card {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.secret-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    border-color: rgba(132, 192, 97, 0.5);
+}
+
+.secret-card.featured {
+    border-color: rgba(255, 157, 61, 0.5);
+    background: linear-gradient(135deg, rgba(132, 192, 97, 0.1), rgba(255, 157, 61, 0.1));
+}
+
+.secret-card.featured:hover {
+    border-color: rgba(255, 157, 61, 0.8);
+}
+
+.secret-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 32px;
+    background: rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid var(--border-glass);
+}
+
+.secret-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.secret-title {
+    flex: 1;
+}
+
+.secret-title h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 0 0 8px 0;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.difficulty {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.difficulty.easy {
+    background: rgba(34, 197, 94, 0.2);
+    color: #22c55e;
+    border: 1px solid rgba(34, 197, 94, 0.4);
+}
+
+.difficulty.medium {
+    background: rgba(255, 157, 61, 0.2);
+    color: var(--clr-orange-main);
+    border: 1px solid rgba(255, 157, 61, 0.4);
+}
+
+.difficulty.hard {
+    background: rgba(239, 68, 68, 0.2);
+    color: #ef4444;
+    border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+.difficulty.unknown {
+    background: rgba(168, 85, 247, 0.2);
+    color: #a855f7;
+    border: 1px solid rgba(168, 85, 247, 0.4);
+}
+
+.secret-content {
+    padding: 24px 32px 32px;
+}
+
+.secret-description {
+    color: var(--clr-text-light);
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.secret-location {
+    background: rgba(0, 0, 0, 0.2);
+    border-left: 3px solid var(--clr-green-main);
+    border-radius: 8px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    color: var(--clr-text-muted);
+}
+
+.secret-location strong {
+    color: var(--clr-green-main);
+}
+
+.secret-steps {
+    margin-bottom: 20px;
+}
+
+.secret-steps strong {
+    display: block;
+    color: #fff;
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+.secret-steps ol,
+.secret-steps ul {
+    margin-left: 20px;
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+}
+
+.secret-steps li {
+    margin-bottom: 8px;
+}
+
+.secret-note {
+    background: rgba(132, 192, 97, 0.15);
+    border: 2px solid rgba(132, 192, 97, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.secret-note strong {
+    color: var(--clr-green-main);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.secret-note p {
+    color: var(--clr-text-light);
+    margin: 0;
+}
+
+.morse-code-box {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 157, 61, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.morse-code-box strong {
+    color: var(--clr-orange-main);
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.morse-text {
+    font-family: monospace;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--clr-green-main);
+    margin: 12px 0;
+    text-shadow: 0 0 15px rgba(132, 192, 97, 0.5);
+}
+
+.morse-subtitle {
+    font-size: 0.9rem;
+    color: var(--clr-text-muted);
+    font-style: italic;
+    margin: 0;
+}
+
+.secret-theory {
+    background: rgba(168, 85, 247, 0.1);
+    border: 2px solid rgba(168, 85, 247, 0.3);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.secret-theory strong {
+    color: #a855f7;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.secret-theory ul {
+    margin-left: 20px;
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+}
+
+.secret-theory li {
+    margin-bottom: 8px;
+}
+
+.secret-theory p {
+    color: var(--clr-text-light);
+    margin: 0;
+    line-height: 1.6;
+}
+
+.secret-items {
+    margin: 20px 0;
+}
+
+.secret-items strong {
+    display: block;
+    color: #fff;
+    margin-bottom: 12px;
+    font-size: 1.05rem;
+}
+
+.secret-items ul {
+    margin-left: 20px;
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+}
+
+.code-reveal {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.code-reveal strong {
+    display: block;
+    color: var(--clr-green-main);
+    margin-bottom: 16px;
+    font-size: 1.1rem;
+}
+
+.code-display {
+    background: rgba(0, 0, 0, 0.3);
+    border: 3px solid var(--clr-green-main);
+    border-radius: 16px;
+    padding: 20px;
+    font-family: monospace;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--clr-green-main);
+    text-shadow: 0 0 20px rgba(132, 192, 97, 0.6);
+    margin-bottom: 12px;
+}
+
+.code-reward {
+    color: var(--clr-orange-main);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+/* Theories Section */
+.theories-section {
+    padding: 80px 0;
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.15), transparent);
+}
+
+.theory-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 32px;
+}
+
+.theory-card {
+    background: var(--bg-glass);
+    border: 2px solid var(--border-glass);
+    border-radius: 20px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.theory-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.theory-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.theory-card h3 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-bottom: 16px;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.theory-card p {
+    color: var(--clr-text-muted);
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.theory-evidence {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    padding: 16px;
+    margin-top: 16px;
+}
+
+.theory-evidence strong {
+    display: block;
+    color: var(--clr-green-main);
+    margin-bottom: 12px;
+}
+
+.theory-evidence ul {
+    margin-left: 20px;
+    color: var(--clr-text-muted);
+    line-height: 1.8;
+}
+
+/* Tips Section */
+.secrets-tips-section {
+    padding: 80px 0;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 32px;
+}
+
+.tip-card {
+    text-align: center;
+    padding: 32px;
+    background: var(--bg-glass);
+    border-radius: 20px;
+    border: 2px solid var(--border-glass);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-4px);
+}
+
+.tip-number {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--clr-green-main), #6fa84e);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px auto;
+    box-shadow: 0 0 30px rgba(132, 192, 97, 0.5);
+}
+
+.tip-card h3 {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.tip-card p {
+    color: var(--clr-text-muted);
+    line-height: 1.6;
+}
+
+/* CTA Section */
+.secrets-cta-section {
+    padding: 80px 0 100px;
+}
+
+.cta-box {
+    background: linear-gradient(135deg, rgba(132, 192, 97, 0.2), rgba(255, 157, 61, 0.2));
+    border: 2px solid rgba(132, 192, 97, 0.4);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.cta-box h2 {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 16px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.cta-box p {
+    font-size: 1.25rem;
+    color: var(--clr-text-light);
+    margin-bottom: 32px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 768px) {
+    .secrets-hero-section .section-header h1 {
+        font-size: 2rem;
+    }
+    
+    .secrets-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .secret-header {
+        padding: 20px;
+    }
+    
+    .secret-content {
+        padding: 20px;
+    }
+    
+    .morse-text {
+        font-size: 1.2rem;
+    }
+    
+    .code-display {
+        font-size: 2rem;
+    }
+    
+    .cta-box {
+        padding: 40px 24px;
+    }
+    
+    .cta-box h2 {
+        font-size: 2rem;
+    }
+}
