@@ -27,6 +27,8 @@ Allow: /
 # Google AI
 User-agent: Google-Extended
 User-agent: GoogleOther
+User-agent: Gemini
+User-agent: Bard
 Allow: /
 
 # Perplexity AI
@@ -77,6 +79,38 @@ Allow: /
 
 # AI2 (Allen Institute)
 User-agent: AI2Bot
+Allow: /
+
+# Amazon AI
+User-agent: Amazonbot
+Allow: /
+
+# Bing AI
+User-agent: bingbot
+Allow: /
+
+# Claude AI (additional)
+User-agent: ClaudeBot
+Allow: /
+
+# Hugging Face
+User-agent: HuggingFaceBot
+Allow: /
+
+# Inflection AI (Pi)
+User-agent: InflectionBot
+Allow: /
+
+# Mistral AI
+User-agent: MistralBot
+Allow: /
+
+# Stability AI
+User-agent: StabilityBot
+Allow: /
+
+# You.com
+User-agent: YouBot
 Allow: /
 
 # Scrapy (通常用于数据抓取，可选择禁止)
