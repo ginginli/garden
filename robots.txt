@@ -167,6 +167,7 @@ Allow: /
 Allow: /calculator/
 Allow: /stock/
 Allow: /codes/
+Allow: /mutations/
 Allow: /secrets/
 Allow: /sitemap.xml
 Allow: /llms.txt
