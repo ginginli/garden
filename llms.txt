@@ -18,11 +18,17 @@ Garden Horizons reached 200,000+ players on launch day. Our site helps players m
 - Crop Mutations：Weather-dependent mutations like FOGGY (1.2x), FLOODED (1.8x), and CHILLED variants
 - Flora Diary：Real botanical knowledge system teaching facts about plants
 
-## Active Codes (Updated 2026-02-27)
-- RELEASE：2500 Shillings + 15x Carrot Seeds + 3x Corn Seeds
-- DAWN：1x Dawnfruit Seed (rare)
-- GIFT：1x Cabbage Seed + 1x of every Sprinkler
-- 358：2000 Shillings (secret code)
+## Active Codes (Updated 2026-03-04)
+- 358：10,000 Shillings (Released February 22, 2026)
+- ADMIN：15,000 Shillings (Released March 1st, 2026)
+
+## Expired Codes
+- RELEASE：600 Shillings + 15x Carrot Seeds + 3x Corn Seeds (Expired March 3, 2026)
+- DAWN：1x Dawnfruit Seed (Expired March 3, 2026)
+- THANKYOU：1x Premium Dawn Seed Pack + 2x Dawn Seed Pack + 1x Super Sprinkler (Expired March 3, 2026)
+- DAWNFRUIT：1x Dawnfruit Seed (Expired March 3, 2026)
+- LIVE：1x Dawnblossom Seed (Expired February 22, 2026)
+- GIFT：1x Cabbage Seed + Sprinklers (Expired February 28, 2026)
 
 ## Shop Information
 - Bill's Seed Shop：Sells seeds from Carrot ($50) to rare Plum ($60,000)
