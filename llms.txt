@@ -17,7 +17,8 @@ Garden Horizons reached 200,000+ players on launch day. Our site helps players m
 - Dynamic Weather System：Rain (+25% growth), Fog (FOGGY mutations), Storm (+2x growth), Snow (CHILLED variants)
 - Ripeness Stages：Crops continue ripening beyond harvest-ready, reaching 'Lush' status for 3x selling value
 - Crop Mutations：Weather-dependent mutations like FOGGY (1.25x), FLOODED (1.75x), SHOCKED (4.5x), and STARSTRUCK (6.5x)
-- Mutation Stacking：Mutations add together (additive), then multiply by variant total for massive profit multipliers
+- Additive Mutation Stacking：Mutations add together, then multiply with ripeness and color - (Foggy 1.25 + Soaked 1.2) × Lush 3× × Gold 5× = 36.75× base price
+- Mutation Incompatibility：Flooded and Soaked cannot coexist; Snowy and Chilled are mutually exclusive
 - Combo Mutations：Frostbit (3.5x) = Soaked + Snowy, Mossy (3.5x) = Foggy + Chilled, Muddy (5.0x) = Sandy + Flooded
 - Flora Diary：Real botanical knowledge system teaching facts about plants
 

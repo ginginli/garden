@@ -83,10 +83,6 @@
                             </div>
                             <div class="plant-details">
                                 <div class="info-row">
-                                    <span>Seed Cost:</span>
-                                    <span id="plantCost" class="info-value">-</span>
-                                </div>
-                                <div class="info-row">
                                     <span>Base Price:</span>
                                     <span id="plantBase" class="info-value">-</span>
                                 </div>
@@ -95,6 +91,27 @@
                                     <span id="plantWeight" class="info-value">-</span>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="panel-section">
+                        <h3>🎨 Color Variant</h3>
+                        <div class="stage-buttons">
+                            <button class="stage-btn active" data-variant="none">
+                                <span class="stage-emoji">⚪</span>
+                                <span class="stage-name">None</span>
+                                <span class="stage-mult">×1.0</span>
+                            </button>
+                            <button class="stage-btn" data-variant="silver">
+                                <span class="stage-emoji">🥈</span>
+                                <span class="stage-name">Silver</span>
+                                <span class="stage-mult">×2.0</span>
+                            </button>
+                            <button class="stage-btn" data-variant="gold">
+                                <span class="stage-emoji">🥇</span>
+                                <span class="stage-name">Gold</span>
+                                <span class="stage-mult">×5.0</span>
+                            </button>
                         </div>
                     </div>
 
@@ -120,13 +137,8 @@
                     </div>
 
                     <div class="panel-section">
-                        <h3>⚡ Mutations <span class="mutation-count">(0 selected)</span></h3>
-                        <div class="mutation-filter">
-                            <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="weather">Weather</button>
-                            <button class="filter-btn" data-filter="combo">Combo</button>
-                            <button class="filter-btn" data-filter="limited">Limited</button>
-                        </div>
+                        <h3>⚡ Mutations <span class="mutation-count">(0 selected · ×1.0)</span></h3>
+                        <div id="mutationMessage" class="mutation-message" style="display: none;"></div>
                         <div id="mutationList" class="mutation-list"></div>
                     </div>
 
@@ -155,26 +167,15 @@
                     </div>
 
                     <div id="resultDetails" style="display: none;">
+                        <div class="result-plant-display">
+                            <img id="resultPlantImage" class="result-plant-image" src="" alt="Plant">
+                            <div class="result-plant-name" id="resultPlantName">Plant Name</div>
+                        </div>
+
                         <div class="result-card main-result">
-                            <div class="result-grade" id="resultGrade">A</div>
                             <div class="result-main-value">
                                 <span class="result-label">Final Sell Price</span>
                                 <span class="result-value" id="resultSellPrice">0</span>
-                            </div>
-                        </div>
-
-                        <div class="metrics-grid">
-                            <div class="metric-card">
-                                <span class="metric-label">Profit</span>
-                                <span class="metric-value" id="resultProfit">0</span>
-                            </div>
-                            <div class="metric-card">
-                                <span class="metric-label">ROI</span>
-                                <span class="metric-value" id="resultROI">0%</span>
-                            </div>
-                            <div class="metric-card">
-                                <span class="metric-label">Profit/Hour</span>
-                                <span class="metric-value" id="resultProfitHour">0</span>
                             </div>
                         </div>
 
@@ -182,8 +183,6 @@
                             <h4>📐 Formula Breakdown</h4>
                             <div class="formula-steps" id="formulaSteps"></div>
                         </div>
-
-                        <div id="recommendations" class="recommendations"></div>
                     </div>
                 </div>
             </div>
@@ -208,7 +207,7 @@
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
                     <h3>16 Mutations</h3>
-                    <p>The Garden Horizons Calculator supports all weather, combo, and limited mutations</p>
+                    <p>The Garden Horizons Calculator supports all weather, combo, and admin mutations with automatic incompatibility detection</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
@@ -259,7 +258,7 @@
                 <div class="step-card">
                     <div class="step-number">3</div>
                     <h3>Add Mutations</h3>
-                    <p>Click on mutations to add them - the Garden Horizons Calculator multiplies them together</p>
+                    <p>Click on mutations to add them - the Garden Horizons Calculator adds them together. Some mutations are mutually exclusive and will be disabled automatically.</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">4</div>
@@ -320,7 +319,7 @@
                 </div>
                 <div class="faq-item">
                     <h3>How do mutations work in the Garden Horizons Calculator?</h3>
-                    <p>The Garden Horizons Calculator multiplies mutations together (not adds them). For example, Foggy (×1.25) + Soaked (×1.2) = ×1.5 total multiplier.</p>
+                    <p>The Garden Horizons Calculator adds mutations together (not multiplies them). For example, Foggy (1.25×) + Soaked (1.2×) = 2.45× total multiplier. Note: Flooded and Soaked cannot exist on the same crop, and Snowy and Chilled are also mutually exclusive.</p>
                 </div>
                 <div class="faq-item">
                     <h3>Can I use the Garden Horizons Calculator for free?</h3>

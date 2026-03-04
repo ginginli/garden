@@ -4,10 +4,10 @@
 // State Management
 let state = {
     selectedPlant: null,
+    selectedVariant: 'none',
     selectedStage: 'ripened',
     selectedMutations: [],
     customWeight: null,
-    currentFilter: 'all',
     currentPlantFilter: 'all'
 };
 
@@ -15,11 +15,11 @@ let state = {
 document.addEventListener('DOMContentLoaded', () => {
     initializePlantFilter();
     initializePlantList();
+    initializeVariantButtons();
     initializeStageButtons();
     initializeMutationList();
     initializeWeightInput();
     initializeClearButton();
-    initializeFilterButtons();
 });
 
 // Plant Filter
@@ -87,29 +87,50 @@ function updatePlantInfo() {
     const info = document.getElementById('plantInfo');
     const plant = state.selectedPlant;
     
-    if (plant) {
-        // Update plant image
-        const plantImage = document.getElementById('plantImage');
-        plantImage.src = plant.image;
-        plantImage.alt = plant.name;
-        plantImage.onerror = function() {
-            this.src = '/calculator/images/plants/Placeholder.webp';
-        };
-        
-        document.getElementById('plantCost').textContent = plant.cost !== null ? `${plant.cost.toLocaleString()} Shillings` : 'Cost data pending';
-        document.getElementById('plantBase').textContent = `${plant.basePrice.toLocaleString()} Shillings`;
-        document.getElementById('plantWeight').textContent = `${plant.baseWeight} kg`;
-        info.style.display = 'block';
+    if (!plant || !info) return;
+    
+    // Update plant image
+    const plantImage = document.getElementById('plantImage');
+    const plantBase = document.getElementById('plantBase');
+    const plantWeight = document.getElementById('plantWeight');
+    
+    if (!plantImage || !plantBase || !plantWeight) {
+        console.error('Plant info elements not found');
+        return;
     }
+    
+    plantImage.src = plant.image;
+    plantImage.alt = plant.name;
+    plantImage.onerror = function() {
+        this.src = '/calculator/images/plants/Placeholder.webp';
+    };
+    
+    plantBase.textContent = `${plant.basePrice.toLocaleString()} Shillings`;
+    plantWeight.textContent = `${plant.baseWeight} kg`;
+    info.style.display = 'block';
 }
 
 function hidePlantInfo() {
     document.getElementById('plantInfo').style.display = 'none';
 }
 
+// Variant Selection
+function initializeVariantButtons() {
+    const buttons = document.querySelectorAll('[data-variant]');
+    
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            state.selectedVariant = btn.dataset.variant;
+            calculate();
+        });
+    });
+}
+
 // Stage Selection
 function initializeStageButtons() {
-    const buttons = document.querySelectorAll('.stage-btn');
+    const buttons = document.querySelectorAll('[data-stage]');
     
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
@@ -117,20 +138,6 @@ function initializeStageButtons() {
             btn.classList.add('active');
             state.selectedStage = btn.dataset.stage;
             calculate();
-        });
-    });
-}
-
-// Mutation Filter
-function initializeFilterButtons() {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            state.currentFilter = btn.dataset.filter;
-            renderMutationList();
         });
     });
 }
@@ -144,12 +151,11 @@ function renderMutationList() {
     const container = document.getElementById('mutationList');
     container.innerHTML = '';
     
-    const filteredMutations = MUTATIONS.filter(m => {
-        if (state.currentFilter === 'all') return true;
-        return m.category === state.currentFilter;
-    });
+    // Check for incompatible mutations and prepare message
+    const disabledMutations = [];
     
-    filteredMutations.forEach(mutation => {
+    // Show all mutations without filtering
+    MUTATIONS.forEach(mutation => {
         const item = document.createElement('div');
         item.className = 'mutation-item';
         item.dataset.mutationId = mutation.id;
@@ -158,14 +164,25 @@ function renderMutationList() {
         const isDisabled = isMutationDisabled(mutation);
         
         if (isSelected) item.classList.add('selected');
-        if (isDisabled) item.classList.add('disabled');
+        if (isDisabled) {
+            item.classList.add('disabled');
+            // Find which selected mutation is blocking this one
+            for (const selectedId of state.selectedMutations) {
+                const selectedMutation = MUTATIONS.find(m => m.id === selectedId);
+                if (selectedMutation.incompatible.includes(mutation.id)) {
+                    disabledMutations.push({
+                        disabled: mutation.name,
+                        blocker: selectedMutation.name
+                    });
+                    break;
+                }
+            }
+        }
         
         item.innerHTML = `
             <span class="mutation-emoji">${mutation.emoji}</span>
-            <div class="mutation-info">
-                <span class="mutation-name">${mutation.name}</span>
-                <span class="mutation-mult">×${mutation.multiplier.toFixed(1)}</span>
-            </div>
+            <span class="mutation-name">${mutation.name}</span>
+            <span class="mutation-mult">×${mutation.multiplier.toFixed(1)}</span>
         `;
         
         if (!isDisabled) {
@@ -175,7 +192,25 @@ function renderMutationList() {
         container.appendChild(item);
     });
     
+    // Show incompatibility message if any mutations are disabled
+    showIncompatibilityMessage(disabledMutations);
+    
     updateMutationCount();
+}
+
+function showIncompatibilityMessage(disabledMutations) {
+    const messageEl = document.getElementById('mutationMessage');
+    if (!messageEl) return;
+    
+    if (disabledMutations.length > 0) {
+        const messages = disabledMutations.map(item => 
+            `${item.disabled} cannot be selected with ${item.blocker}`
+        );
+        messageEl.textContent = `⚠️ ${messages.join(' • ')}`;
+        messageEl.style.display = 'block';
+    } else {
+        messageEl.style.display = 'none';
+    }
 }
 
 function isMutationDisabled(mutation) {
@@ -206,7 +241,9 @@ function toggleMutation(mutationId) {
 
 function updateMutationCount() {
     const count = state.selectedMutations.length;
-    document.querySelector('.mutation-count').textContent = `(${count} selected)`;
+    const totalMultiplier = calculateMutationMultiplier();
+    const displayMultiplier = totalMultiplier > 0 ? totalMultiplier : 1.0;
+    document.querySelector('.mutation-count').textContent = `(${count} selected · ×${displayMultiplier.toFixed(1)})`;
 }
 
 // Weight Input
@@ -225,21 +262,21 @@ function initializeClearButton() {
     document.getElementById('clearBtn').addEventListener('click', () => {
         // Reset state
         state.selectedPlant = null;
+        state.selectedVariant = 'none';
         state.selectedStage = 'ripened';
         state.selectedMutations = [];
         state.customWeight = null;
-        state.currentFilter = 'all';
         state.currentPlantFilter = 'all';
         
         // Reset UI
         document.getElementById('weightInput').value = '';
-        document.querySelectorAll('.stage-btn').forEach(btn => {
+        document.querySelectorAll('[data-variant]').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.variant === 'none') btn.classList.add('active');
+        });
+        document.querySelectorAll('[data-stage]').forEach(btn => {
             btn.classList.remove('active');
             if (btn.dataset.stage === 'ripened') btn.classList.add('active');
-        });
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.filter === 'all') btn.classList.add('active');
         });
         document.querySelectorAll('.plant-filter .filter-btn').forEach(btn => {
             btn.classList.remove('active');
@@ -260,34 +297,30 @@ function calculate() {
         return;
     }
     
+    // Check if required data is loaded
+    if (typeof VARIANTS === 'undefined' || typeof RIPENESS === 'undefined') {
+        console.error('VARIANTS or RIPENESS not loaded');
+        return;
+    }
+    
     const plant = state.selectedPlant;
-    const ripenessMultiplier = RIPENESS[state.selectedStage].multiplier;
+    const variantMultiplier = VARIANTS[state.selectedVariant]?.multiplier || 1;
+    const ripenessMultiplier = RIPENESS[state.selectedStage]?.multiplier || 1;
     const mutationMultiplier = calculateMutationMultiplier();
     const weight = state.customWeight || plant.baseWeight;
     const weightFactor = Math.pow(weight / plant.baseWeight, 2);
     
-    // Official Formula
-    const sellPrice = Math.round(plant.basePrice * ripenessMultiplier * mutationMultiplier * weightFactor);
-    const profit = plant.cost !== null ? sellPrice - plant.cost : null;
-    const roi = (plant.cost !== null && plant.cost > 0) ? (profit / plant.cost) * 100 : null;
-    const profitPerHour = profit !== null ? profit * (3600 / plant.growTime) : null;
-    
-    // Grade calculation
-    let grade = 'C';
-    if (roi !== null) {
-        if (roi >= 100) grade = 'A';
-        else if (roi >= 50) grade = 'B';
-    }
+    // Official Formula: Base × Variant × Ripeness × Mutations × Weight
+    // Note: If no mutations selected, mutationMultiplier is 0, so we treat it as 1
+    const finalMutationMultiplier = mutationMultiplier > 0 ? mutationMultiplier : 1;
+    const sellPrice = Math.round(plant.basePrice * variantMultiplier * ripenessMultiplier * finalMutationMultiplier * weightFactor);
     
     // Display results
     displayResults({
         sellPrice,
-        profit,
-        roi,
-        profitPerHour,
-        grade,
+        variantMultiplier,
         ripenessMultiplier,
-        mutationMultiplier,
+        mutationMultiplier: finalMutationMultiplier,
         weightFactor
     });
 }
@@ -295,12 +328,13 @@ function calculate() {
 function calculateMutationMultiplier() {
     if (state.selectedMutations.length === 0) return 1;
     
-    // Multiplicative stacking (official formula)
-    let multiplier = 1;
+    // Additive stacking for mutations (official formula)
+    // Mutations add together, then multiply with Ripeness and Variant
+    let multiplier = 0;
     state.selectedMutations.forEach(mutationId => {
         const mutation = MUTATIONS.find(m => m.id === mutationId);
         if (mutation && mutation.multiplier > 0) {
-            multiplier *= mutation.multiplier;
+            multiplier += mutation.multiplier;
         }
     });
     
@@ -309,37 +343,62 @@ function calculateMutationMultiplier() {
 
 // Display Results
 function displayResults(result) {
-    document.getElementById('resultContent').style.display = 'none';
-    document.getElementById('resultDetails').style.display = 'block';
+    const resultContent = document.getElementById('resultContent');
+    const resultDetails = document.getElementById('resultDetails');
     
-    // Main result
-    const gradeEl = document.getElementById('resultGrade');
-    gradeEl.textContent = result.grade;
-    gradeEl.className = 'result-grade';
-    if (result.grade === 'B') gradeEl.classList.add('grade-b');
-    if (result.grade === 'C') gradeEl.classList.add('grade-c');
+    if (!resultContent || !resultDetails) {
+        console.error('Result containers not found');
+        return;
+    }
     
-    document.getElementById('resultSellPrice').textContent = `${result.sellPrice.toLocaleString()} Shillings`;
+    resultContent.style.display = 'none';
+    resultDetails.style.display = 'block';
     
-    // Metrics
-    document.getElementById('resultProfit').textContent = result.profit !== null ? `${result.profit.toLocaleString()} Shillings` : 'Cost data pending';
-    document.getElementById('resultROI').textContent = result.roi !== null ? `${result.roi.toFixed(1)}%` : 'Cost data pending';
-    document.getElementById('resultProfitHour').textContent = result.profitPerHour !== null ? `${Math.round(result.profitPerHour).toLocaleString()} Shillings/h` : 'Cost data pending';
+    // Display plant image and name
+    const plant = state.selectedPlant;
+    const resultPlantImage = document.getElementById('resultPlantImage');
+    const resultPlantName = document.getElementById('resultPlantName');
+    
+    if (resultPlantImage && plant) {
+        resultPlantImage.src = plant.image;
+        resultPlantImage.alt = plant.name;
+        resultPlantImage.onerror = function() {
+            this.src = '/calculator/images/plants/Placeholder.webp';
+        };
+    }
+    
+    if (resultPlantName && plant) {
+        resultPlantName.textContent = `${plant.emoji} ${plant.name}`;
+    }
+    
+    // Display sell price
+    const sellPriceEl = document.getElementById('resultSellPrice');
+    if (sellPriceEl) {
+        sellPriceEl.textContent = `${result.sellPrice.toLocaleString()} Shillings`;
+    }
     
     // Formula breakdown
     displayFormulaBreakdown(result);
-    
-    // Recommendations
-    displayRecommendations(result);
 }
 
 function displayFormulaBreakdown(result) {
     const container = document.getElementById('formulaSteps');
+    if (!container) {
+        console.error('formulaSteps container not found');
+        return;
+    }
+    
     const plant = state.selectedPlant;
+    if (!plant) {
+        console.error('No plant selected');
+        return;
+    }
+    
     const weight = state.customWeight || plant.baseWeight;
     
     const steps = [
         { label: 'Base Price', value: `${plant.basePrice.toLocaleString()} Shillings` },
+        { label: `Variant (${VARIANTS[state.selectedVariant].name})`, value: `×${result.variantMultiplier.toFixed(1)}` },
         { label: `Ripeness (${RIPENESS[state.selectedStage].name})`, value: `×${result.ripenessMultiplier.toFixed(1)}` },
         { label: 'Mutations', value: `×${result.mutationMultiplier.toFixed(2)}` },
         { label: 'Weight Factor', value: `×${result.weightFactor.toFixed(2)}` },
@@ -352,66 +411,6 @@ function displayFormulaBreakdown(result) {
             <span class="formula-step-value">${step.value}</span>
         </div>
     `).join('');
-}
-
-function displayRecommendations(result) {
-    const container = document.getElementById('recommendations');
-    const recommendations = [];
-    
-    // Stage recommendation
-    if (state.selectedStage !== 'lush') {
-        const lushMultiplier = RIPENESS.lush.multiplier;
-        const currentMultiplier = result.ripenessMultiplier;
-        const improvement = ((lushMultiplier / currentMultiplier - 1) * 100).toFixed(0);
-        recommendations.push({
-            icon: '🌳',
-            text: `Wait for Lush stage to increase profit by ${improvement}%`
-        });
-    }
-    
-    // Mutation recommendation
-    if (state.selectedMutations.length === 0) {
-        recommendations.push({
-            icon: '⚡',
-            text: 'Add mutations to multiply your profit! Weather events create mutations.'
-        });
-    }
-    
-    // ROI recommendation
-    if (result.roi < 50) {
-        recommendations.push({
-            icon: '💡',
-            text: 'Low ROI. Consider switching to higher-value crops or waiting for better mutations.'
-        });
-    } else if (result.roi >= 100) {
-        recommendations.push({
-            icon: '🎉',
-            text: 'Excellent ROI! This is a highly profitable setup.'
-        });
-    }
-    
-    // Weight recommendation
-    if (!state.customWeight) {
-        recommendations.push({
-            icon: '⚖️',
-            text: 'Try adjusting weight to see how it affects profit. Heavier crops sell for more!'
-        });
-    }
-    
-    if (recommendations.length > 0) {
-        container.innerHTML = `
-            <h4>💡 Recommendations</h4>
-            ${recommendations.map(rec => `
-                <div class="recommendation-item">
-                    <span class="recommendation-icon">${rec.icon}</span>
-                    <span class="recommendation-text">${rec.text}</span>
-                </div>
-            `).join('')}
-        `;
-        container.style.display = 'block';
-    } else {
-        container.style.display = 'none';
-    }
 }
 
 function hideResults() {

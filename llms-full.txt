@@ -46,7 +46,7 @@ The calculator uses the official Garden Horizons Wiki formula:
 
 - **Base Price**: Each plant's default selling value
 - **Ripeness Multiplier**: Unripe (1.0×), Ripened (2.0×), Lush (3.0×)
-- **Mutation Multiplier**: Mutations multiply together (e.g., Foggy 1.25× + Soaked 1.2× = 1.5× total)
+- **Mutation Multiplier**: Mutations add together (e.g., Foggy 1.25 + Soaked 1.2 = 2.45× total). Note: Flooded and Soaked are mutually exclusive; Snowy and Chilled cannot coexist.
 - **Weight Factor**: (actual weight ÷ base weight)² - heavier crops sell for more
 
 ### Mutation Types
@@ -72,6 +72,11 @@ The calculator uses the official Garden Horizons Wiki formula:
 - Tidal: ×2.0 (Tsunami event)
 - Electric: Special (Admin only)
 
+**Mutation Incompatibility Rules**:
+- Flooded and Soaked cannot exist on the same crop (mutually exclusive)
+- Snowy and Chilled cannot coexist on the same crop (mutually exclusive)
+- The calculator automatically disables incompatible mutations when one is selected
+
 ### Example Calculations
 
 **Example 1: Basic Carrot**
@@ -84,7 +89,7 @@ The calculator uses the official Garden Horizons Wiki formula:
 **Example 2: Lush Tomato with Mutations**
 - Plant: Tomato (Cost: 4,000, Base Price: 60)
 - Ripeness: Lush (×3.0)
-- Mutations: Foggy (×1.25) + Soaked (×1.2) = ×1.5 total
+- Mutations: Foggy (1.25) + Soaked (1.2) = 2.45× total (additive stacking)
 - Weight: Base (0.15 kg)
 - **Result**: 270 coins sell price, -3,730 profit, -93% ROI
 - **Note**: Some plants need heavy mutations to be profitable

@@ -48,12 +48,13 @@ const MUTATIONS = [
     { id: 'muddy', name: 'Muddy', emoji: '🟫', multiplier: 5.0, category: 'combo', trigger: 'Sandy + (Flooded or Soaked)', requires: ['sandy'], requiresOneOf: ['flooded', 'soaked'], incompatible: [] },
     { id: 'frostbit', name: 'Frostbit', emoji: '🧊', multiplier: 3.5, category: 'combo', trigger: 'Soaked + Snowy', requires: ['soaked', 'snowy'], incompatible: [] },
     
-    // Limited Mutations (Admin/Event)
-    { id: 'meteoric', name: 'Meteoric', emoji: '☄️', multiplier: 10.0, category: 'limited', trigger: 'Meteor Shower', incompatible: [] },
-    { id: 'galactic', name: 'Galactic', emoji: '🌌', multiplier: 5.0, category: 'limited', trigger: 'Black Hole event', incompatible: [] },
-    { id: 'nova', name: 'Nova', emoji: '💫', multiplier: 6.5, category: 'limited', trigger: 'Black Hole event', incompatible: [] },
-    { id: 'tidal', name: 'Tidal', emoji: '🌊', multiplier: 2.0, category: 'limited', trigger: 'Tsunami event', incompatible: [] },
-    { id: 'electric', name: 'Electric', emoji: '⚡', multiplier: 0, category: 'limited', trigger: 'Unknown (Admin)', incompatible: [] }
+    // Admin Mutations
+    { id: 'tidal', name: 'Tidal', emoji: '🌊', multiplier: 2.0, category: 'admin', trigger: 'Admin-applied', incompatible: [] },
+    { id: 'galactic', name: 'Galactic', emoji: '🌌', multiplier: 5.0, category: 'admin', trigger: 'Admin-applied', incompatible: [] },
+    { id: 'nova', name: 'Nova', emoji: '💫', multiplier: 6.5, category: 'admin', trigger: 'Admin-applied', incompatible: [] },
+    { id: 'meteoric', name: 'Meteoric', emoji: '☄️', multiplier: 10.0, category: 'admin', trigger: 'Admin-applied', incompatible: [] },
+    { id: 'salad', name: 'Salad', emoji: '🥗', multiplier: 20.0, category: 'admin', trigger: 'Admin-applied', incompatible: [] },
+    { id: 'banned', name: 'Banned', emoji: '🚫', multiplier: 20.0, category: 'admin', trigger: 'Admin-applied', incompatible: [] }
 ];
 
 // Ripeness Stages (Official Wiki Confirmed)
@@ -61,4 +62,11 @@ const RIPENESS = {
     unripe: { name: 'Unripe', emoji: '🌱', multiplier: 1.0 },
     ripened: { name: 'Ripened', emoji: '🌿', multiplier: 2.0 },
     lush: { name: 'Lush', emoji: '🌳', multiplier: 3.0 }
+};
+
+// Color Variants (Official Wiki Confirmed)
+const VARIANTS = {
+    none: { name: 'None', emoji: '⚪', multiplier: 1.0 },
+    silver: { name: 'Silver', emoji: '🥈', multiplier: 2.0 },
+    gold: { name: 'Gold', emoji: '🥇', multiplier: 5.0 }
 };

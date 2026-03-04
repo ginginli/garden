@@ -37,7 +37,7 @@
 /* Calculator Grid Layout */
 .calculator-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 1fr;
     gap: 32px;
     margin-bottom: 48px;
 }
@@ -240,13 +240,13 @@
     background: rgba(0, 0, 0, 0.3);
     border: 2px solid var(--border-glass);
     border-radius: 12px;
-    padding: 16px 12px;
+    padding: 8px 8px;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
     font-family: inherit;
 }
 
@@ -262,17 +262,17 @@
 }
 
 .stage-emoji {
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
 .stage-name {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--clr-text-light);
     font-weight: 600;
 }
 
 .stage-mult {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--clr-green-main);
     font-weight: 700;
 }
@@ -283,6 +283,18 @@
     gap: 8px;
     margin-bottom: 16px;
     flex-wrap: wrap;
+}
+
+/* Mutation Message */
+.mutation-message {
+    background: rgba(255, 157, 61, 0.15);
+    border: 1px solid rgba(255, 157, 61, 0.3);
+    border-radius: 8px;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 0.85rem;
+    color: var(--clr-orange-main);
+    line-height: 1.4;
 }
 
 .filter-btn {
@@ -308,14 +320,14 @@
     color: var(--clr-green-main);
 }
 
-/* Mutation List */
+/* Mutation List - Tag Cloud Style */
 .mutation-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     max-height: 400px;
     overflow-y: auto;
-    padding-right: 8px;
+    padding: 4px;
 }
 
 .mutation-list::-webkit-scrollbar {
@@ -333,25 +345,32 @@
 }
 
 .mutation-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
     background: rgba(0, 0, 0, 0.3);
     border: 2px solid var(--border-glass);
-    border-radius: 10px;
-    padding: 12px;
+    border-radius: 20px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
+    transition: all 0.2s ease;
+    font-size: 0.9rem;
 }
 
 .mutation-item:hover {
     background: rgba(0, 0, 0, 0.4);
-    transform: translateY(-2px);
+    border-color: var(--clr-green-main);
+    transform: translateY(-1px);
 }
 
 .mutation-item.selected {
-    background: rgba(132, 192, 97, 0.25);
+    background: var(--clr-green-main);
     border-color: var(--clr-green-main);
+}
+
+.mutation-item.selected .mutation-name,
+.mutation-item.selected .mutation-mult {
+    color: white;
 }
 
 .mutation-item.disabled {
@@ -361,28 +380,27 @@
 
 .mutation-item.disabled:hover {
     transform: none;
+    background: rgba(0, 0, 0, 0.3);
+    border-color: var(--border-glass);
 }
 
 .mutation-emoji {
-    font-size: 1.5rem;
-}
-
-.mutation-info {
-    flex: 1;
-    min-width: 0;
+    font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .mutation-name {
-    font-size: 0.9rem;
     font-weight: 600;
     color: #fff;
-    display: block;
+    white-space: nowrap;
 }
 
 .mutation-mult {
-    font-size: 0.8rem;
+    font-family: 'Courier New', monospace;
     color: var(--clr-green-main);
     font-weight: 700;
+    white-space: nowrap;
+    font-size: 0.95rem;
 }
 
 /* Weight Input */
@@ -424,6 +442,28 @@
 
 .result-header h3 {
     margin: 0;
+}
+
+/* Result Plant Display */
+.result-plant-display {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.result-plant-image {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.result-plant-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-green-main);
 }
 
 .btn-clear {
@@ -521,7 +561,7 @@
     font-size: 2rem;
     font-weight: 900;
     color: var(--clr-green-main);
-    font-family: monospace;
+    font-family: 'Courier New', Consolas, Monaco, monospace;
 }
 
 /* Metrics Grid */
@@ -554,7 +594,7 @@
     font-size: 1.5rem;
     font-weight: 900;
     color: #fff;
-    font-family: monospace;
+    font-family: 'Courier New', Consolas, Monaco, monospace;
 }
 
 /* Formula Breakdown */
@@ -595,7 +635,7 @@
 .formula-step-value {
     color: #fff;
     font-weight: 600;
-    font-family: monospace;
+    font-family: 'Courier New', Consolas, Monaco, monospace;
 }
 
 /* Recommendations */
