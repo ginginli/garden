@@ -43,8 +43,8 @@
 }
 
 .calculator-panel {
-    background: rgba(220, 210, 195, 0.9);
-    border: 2px solid rgba(190, 180, 165, 0.6);
+    background: rgba(248, 245, 238, 0.92);
+    border: 2px solid rgba(230, 220, 205, 0.5);
     border-radius: 20px;
     padding: 24px;
     backdrop-filter: blur(12px);
@@ -124,8 +124,8 @@
 
 .plant-search-input {
     width: 100%;
-    background: rgba(210, 200, 185, 0.8);
-    border: 2px solid rgba(180, 170, 155, 0.6);
+    background: rgba(242, 238, 230, 0.8);
+    border: 2px solid rgba(220, 210, 195, 0.5);
     border-radius: 10px;
     padding: 10px 16px;
     color: #333;
@@ -137,7 +137,7 @@
 .plant-search-input:focus {
     outline: none;
     border-color: var(--clr-green-main);
-    background: rgba(220, 210, 195, 0.95);
+    background: rgba(250, 248, 242, 0.95);
 }
 
 .plant-search-input::placeholder {
@@ -287,8 +287,8 @@
 }
 
 .stage-btn {
-    background: rgba(210, 200, 185, 0.85);
-    border: 2px solid rgba(180, 170, 155, 0.6);
+    background: rgba(242, 238, 230, 0.85);
+    border: 2px solid rgba(220, 210, 195, 0.5);
     border-radius: 12px;
     padding: 8px 10px;
     cursor: pointer;
@@ -301,7 +301,7 @@
 }
 
 .stage-btn:hover {
-    background: rgba(200, 190, 175, 0.95);
+    background: rgba(235, 230, 220, 0.95);
     transform: translateY(-2px);
 }
 
@@ -406,8 +406,8 @@
     align-items: center;
     gap: 6px;
     padding: 6px 12px;
-    background: rgba(210, 200, 185, 0.85);
-    border: 2px solid rgba(180, 170, 155, 0.6);
+    background: rgba(242, 238, 230, 0.85);
+    border: 2px solid rgba(220, 210, 195, 0.5);
     border-radius: 20px;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -415,7 +415,7 @@
 }
 
 .mutation-item:hover {
-    background: rgba(200, 190, 175, 0.95);
+    background: rgba(235, 230, 220, 0.95);
     border-color: var(--clr-green-main);
     transform: translateY(-1px);
 }
@@ -437,8 +437,8 @@
 
 .mutation-item.disabled:hover {
     transform: none;
-    background: rgba(210, 200, 185, 0.85);
-    border-color: rgba(180, 170, 155, 0.6);
+    background: rgba(242, 238, 230, 0.85);
+    border-color: rgba(220, 210, 195, 0.5);
 }
 
 .mutation-emoji {
@@ -701,8 +701,8 @@
 
 /* Main Result Card */
 .result-card {
-    background: rgba(210, 200, 185, 0.85);
-    border: 2px solid rgba(180, 170, 155, 0.6);
+    background: rgba(242, 238, 230, 0.85);
+    border: 2px solid rgba(220, 210, 195, 0.5);
     border-radius: 16px;
     padding: 24px;
     margin-bottom: 24px;
@@ -797,8 +797,8 @@
 
 /* Formula Breakdown */
 .formula-breakdown {
-    background: rgba(210, 200, 185, 0.85);
-    border: 2px solid rgba(180, 170, 155, 0.6);
+    background: rgba(242, 238, 230, 0.85);
+    border: 2px solid rgba(220, 210, 195, 0.5);
     border-radius: 16px;
     padding: 16px;
     margin-bottom: 24px;
@@ -821,7 +821,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 8px 10px;
-    background: rgba(195, 185, 170, 0.6);
+    background: rgba(232, 228, 218, 0.6);
     border-radius: 8px;
     font-size: 0.85rem;
 }
