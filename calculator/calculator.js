@@ -13,7 +13,6 @@ let state = {
 
 // Initialize Calculator
 document.addEventListener('DOMContentLoaded', () => {
-    initializePlantFilter();
     initializePlantList();
     initializeVariantButtons();
     initializeStageButtons();
@@ -21,20 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeWeightInput();
     initializeClearButton();
 });
-
-// Plant Filter
-function initializePlantFilter() {
-    const filterButtons = document.querySelectorAll('.plant-filter .filter-btn');
-    
-    filterButtons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            filterButtons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            state.currentPlantFilter = btn.dataset.filter;
-            renderPlantList();
-        });
-    });
-}
 
 // Plant List
 function initializePlantList() {
@@ -45,12 +30,8 @@ function renderPlantList() {
     const container = document.getElementById('plantList');
     container.innerHTML = '';
     
-    const filteredPlants = PLANTS.filter(p => {
-        if (state.currentPlantFilter === 'all') return true;
-        return p.rarity === state.currentPlantFilter;
-    });
-    
-    filteredPlants.forEach(plant => {
+    // Show all plants without filtering
+    PLANTS.forEach(plant => {
         const item = document.createElement('div');
         item.className = 'plant-item';
         item.dataset.plantId = plant.id;
@@ -61,8 +42,7 @@ function renderPlantList() {
         item.innerHTML = `
             <img src="${plant.image}" alt="${plant.name}" class="plant-item-image" onerror="this.src='/calculator/images/plants/Placeholder.webp'">
             <div class="plant-item-info">
-                <span class="plant-item-name">${plant.emoji} ${plant.name}</span>
-                <span class="plant-item-rarity">${plant.rarity}</span>
+                <span class="plant-item-name">${plant.name}</span>
             </div>
         `;
         
@@ -75,6 +55,7 @@ function selectPlant(plantId) {
     state.selectedPlant = PLANTS.find(p => p.id === plantId);
     renderPlantList();
     updatePlantInfo();
+    updateWeightSlider();
     calculate();
 }
 
@@ -246,15 +227,41 @@ function updateMutationCount() {
     document.querySelector('.mutation-count').textContent = `(${count} selected · ×${displayMultiplier.toFixed(1)})`;
 }
 
-// Weight Input
+// Weight Slider
 function initializeWeightInput() {
-    const input = document.getElementById('weightInput');
+    const slider = document.getElementById('weightSlider');
+    const valueDisplay = document.getElementById('weightValue');
+    const baseLabel = document.querySelector('.weight-base-label');
     
-    input.addEventListener('input', (e) => {
+    slider.addEventListener('input', (e) => {
         const value = parseFloat(e.target.value);
-        state.customWeight = value > 0 ? value : null;
+        valueDisplay.textContent = value.toFixed(2);
+        
+        // Update base label
+        if (state.selectedPlant && Math.abs(value - state.selectedPlant.baseWeight) < 0.01) {
+            baseLabel.textContent = '(base)';
+        } else {
+            baseLabel.textContent = '';
+        }
+        
+        state.customWeight = value;
         calculate();
     });
+}
+
+function updateWeightSlider() {
+    const slider = document.getElementById('weightSlider');
+    const valueDisplay = document.getElementById('weightValue');
+    const baseLabel = document.querySelector('.weight-base-label');
+    
+    if (state.selectedPlant) {
+        const baseWeight = state.selectedPlant.baseWeight;
+        slider.value = baseWeight;
+        slider.max = Math.max(10, baseWeight * 3);
+        valueDisplay.textContent = baseWeight.toFixed(2);
+        baseLabel.textContent = '(base)';
+        state.customWeight = baseWeight;
+    }
 }
 
 // Clear Button
@@ -266,10 +273,15 @@ function initializeClearButton() {
         state.selectedStage = 'ripened';
         state.selectedMutations = [];
         state.customWeight = null;
-        state.currentPlantFilter = 'all';
         
         // Reset UI
-        document.getElementById('weightInput').value = '';
+        const slider = document.getElementById('weightSlider');
+        const valueDisplay = document.getElementById('weightValue');
+        const baseLabel = document.querySelector('.weight-base-label');
+        slider.value = 1;
+        valueDisplay.textContent = '1.00';
+        baseLabel.textContent = '(base)';
+        
         document.querySelectorAll('[data-variant]').forEach(btn => {
             btn.classList.remove('active');
             if (btn.dataset.variant === 'none') btn.classList.add('active');
@@ -277,10 +289,6 @@ function initializeClearButton() {
         document.querySelectorAll('[data-stage]').forEach(btn => {
             btn.classList.remove('active');
             if (btn.dataset.stage === 'ripened') btn.classList.add('active');
-        });
-        document.querySelectorAll('.plant-filter .filter-btn').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.filter === 'all') btn.classList.add('active');
         });
         
         hidePlantInfo();

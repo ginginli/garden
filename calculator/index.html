@@ -67,15 +67,6 @@
                 <div class="calculator-panel">
                     <div class="panel-section">
                         <h3>🌱 Select Plant</h3>
-                        <div class="plant-filter">
-                            <button class="filter-btn active" data-filter="all">All</button>
-                            <button class="filter-btn" data-filter="Common">Common</button>
-                            <button class="filter-btn" data-filter="Uncommon">Uncommon</button>
-                            <button class="filter-btn" data-filter="Rare">Rare</button>
-                            <button class="filter-btn" data-filter="Epic">Epic</button>
-                            <button class="filter-btn" data-filter="Legendary">Legendary</button>
-                            <button class="filter-btn" data-filter="Special">Special</button>
-                        </div>
                         <div id="plantList" class="plant-list"></div>
                         <div id="plantInfo" class="plant-info" style="display: none;">
                             <div class="plant-image-container">
@@ -143,12 +134,13 @@
                     </div>
 
                     <div class="panel-section">
-                        <h3>⚖️ Weight (Optional)</h3>
-                        <div class="weight-input-group">
-                            <input type="number" id="weightInput" class="input-number" placeholder="Auto" step="0.01" min="0.01">
-                            <span class="input-unit">kg</span>
+                        <h3>⚖️ Crop Weight</h3>
+                        <div class="weight-slider-container">
+                            <input type="range" id="weightSlider" class="weight-slider" min="0.01" max="10" step="0.01" value="1">
+                            <div class="weight-display">
+                                <span id="weightValue">1.00</span> kg <span class="weight-base-label">(base)</span>
+                            </div>
                         </div>
-                        <p class="input-hint">Leave empty to use base weight. Weight factor: (weight/base)²</p>
                     </div>
                 </div>
 
