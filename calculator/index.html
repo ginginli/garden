@@ -67,48 +67,22 @@
                 <div class="calculator-panel">
                     <div class="panel-section">
                         <h3>🌱 Select Plant</h3>
+                        <div class="plant-search-container">
+                            <input type="text" id="plantSearch" class="plant-search-input" placeholder="Search plants..." autocomplete="off">
+                            <div id="plantSearchResults" class="plant-search-results" style="display: none;"></div>
+                        </div>
                         <div id="plantList" class="plant-list"></div>
                     </div>
 
                     <div class="panel-section">
-                        <h3>🎨 Color Variant</h3>
-                        <div class="stage-buttons">
-                            <button class="stage-btn active" data-variant="none">
-                                <span class="stage-emoji">⚪</span>
-                                <span class="stage-name">None</span>
-                                <span class="stage-mult">×1.0</span>
-                            </button>
-                            <button class="stage-btn" data-variant="silver">
-                                <span class="stage-emoji">🥈</span>
-                                <span class="stage-name">Silver</span>
-                                <span class="stage-mult">×2.0</span>
-                            </button>
-                            <button class="stage-btn" data-variant="gold">
-                                <span class="stage-emoji">🥇</span>
-                                <span class="stage-name">Gold</span>
-                                <span class="stage-mult">×5.0</span>
-                            </button>
+                        <div class="weight-header">
+                            <h3>⚖️ Crop Weight</h3>
+                            <div class="weight-display">
+                                <span id="weightValue">1.00</span> kg <span class="weight-base-label">(base)</span>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="panel-section">
-                        <h3>🌿 Ripeness Stage</h3>
-                        <div class="stage-buttons">
-                            <button class="stage-btn" data-stage="unripe">
-                                <span class="stage-emoji">🌱</span>
-                                <span class="stage-name">Unripe</span>
-                                <span class="stage-mult">×1.0</span>
-                            </button>
-                            <button class="stage-btn active" data-stage="ripened">
-                                <span class="stage-emoji">🌿</span>
-                                <span class="stage-name">Ripened</span>
-                                <span class="stage-mult">×2.0</span>
-                            </button>
-                            <button class="stage-btn" data-stage="lush">
-                                <span class="stage-emoji">🌳</span>
-                                <span class="stage-name">Lush</span>
-                                <span class="stage-mult">×3.0</span>
-                            </button>
+                        <div class="weight-slider-container">
+                            <input type="range" id="weightSlider" class="weight-slider" min="0.01" max="10" step="0.01" value="1">
                         </div>
                     </div>
 
@@ -117,22 +91,12 @@
                         <div id="mutationMessage" class="mutation-message" style="display: none;"></div>
                         <div id="mutationList" class="mutation-list"></div>
                     </div>
-
-                    <div class="panel-section">
-                        <h3>⚖️ Crop Weight</h3>
-                        <div class="weight-slider-container">
-                            <input type="range" id="weightSlider" class="weight-slider" min="0.01" max="10" step="0.01" value="1">
-                            <div class="weight-display">
-                                <span id="weightValue">1.00</span> kg <span class="weight-base-label">(base)</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <!-- Right Panel: Results -->
                 <div class="calculator-panel results-panel">
                     <div class="result-header">
-                        <h3>📊 Calculation Result</h3>
+                        <h3>📊 Result</h3>
                         <button id="clearBtn" class="btn-clear">Clear All</button>
                     </div>
 
@@ -153,6 +117,60 @@
                             <div class="result-main-value">
                                 <span class="result-label">Final Sell Price</span>
                                 <span class="result-value" id="resultSellPrice">0</span>
+                            </div>
+                        </div>
+
+                        <div class="panel-section">
+                            <h3>🌿 Ripeness Stage</h3>
+                            <div class="stage-buttons">
+                                <button class="stage-btn" data-stage="unripe">
+                                    <span class="stage-emoji">🌱</span>
+                                    <span class="stage-name">Unripe</span>
+                                    <span class="stage-mult">×1.0</span>
+                                </button>
+                                <button class="stage-btn active" data-stage="ripened">
+                                    <span class="stage-emoji">🌿</span>
+                                    <span class="stage-name">Ripened</span>
+                                    <span class="stage-mult">×2.0</span>
+                                </button>
+                                <button class="stage-btn" data-stage="lush">
+                                    <span class="stage-emoji">🌳</span>
+                                    <span class="stage-name">Lush</span>
+                                    <span class="stage-mult">×3.0</span>
+                                </button>
+                            </div>
+                            <div class="ripeness-slider-container">
+                                <input type="range" id="ripenessSlider" class="ripeness-slider" min="1" max="3" step="0.1" value="2">
+                                <div class="ripeness-labels">
+                                    <span class="ripeness-label-left">1.0 Unripe</span>
+                                    <span class="ripeness-current">
+                                        <span id="ripenessCurrentEmoji">🌿</span>
+                                        <span id="ripenessCurrentName">Ripened</span>
+                                        <span id="ripenessCurrentMult">×2.0</span>
+                                    </span>
+                                    <span class="ripeness-label-right">3.0 Lush</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-section">
+                            <h3>🎨 Color Variant</h3>
+                            <div class="stage-buttons">
+                                <button class="stage-btn active" data-variant="none">
+                                    <span class="stage-emoji">⚪</span>
+                                    <span class="stage-name">None</span>
+                                    <span class="stage-mult">×1.0</span>
+                                </button>
+                                <button class="stage-btn" data-variant="silver">
+                                    <span class="stage-emoji">🥈</span>
+                                    <span class="stage-name">Silver</span>
+                                    <span class="stage-mult">×2.0</span>
+                                </button>
+                                <button class="stage-btn" data-variant="gold">
+                                    <span class="stage-emoji">🥇</span>
+                                    <span class="stage-name">Gold</span>
+                                    <span class="stage-mult">×5.0</span>
+                                </button>
                             </div>
                         </div>
 

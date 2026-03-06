@@ -6,6 +6,7 @@ let state = {
     selectedPlant: null,
     selectedVariant: 'none',
     selectedStage: 'ripened',
+    ripenessMultiplier: 2.0, // Store actual multiplier value
     selectedMutations: [],
     customWeight: null,
     currentPlantFilter: 'all'
@@ -14,16 +15,81 @@ let state = {
 // Initialize Calculator
 document.addEventListener('DOMContentLoaded', () => {
     initializePlantList();
+    initializePlantSearch();
     initializeVariantButtons();
     initializeStageButtons();
     initializeMutationList();
     initializeWeightInput();
     initializeClearButton();
+    
+    // Default select Carrot on page load
+    selectPlant('carrot');
 });
 
 // Plant List
 function initializePlantList() {
     renderPlantList();
+}
+
+// Plant Search
+function initializePlantSearch() {
+    const searchInput = document.getElementById('plantSearch');
+    const searchResults = document.getElementById('plantSearchResults');
+    
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        if (query.length === 0) {
+            searchResults.style.display = 'none';
+            return;
+        }
+        
+        // Fuzzy search
+        const matches = PLANTS.filter(plant => 
+            plant.name.toLowerCase().includes(query) ||
+            plant.id.toLowerCase().includes(query)
+        );
+        
+        if (matches.length === 0) {
+            searchResults.style.display = 'none';
+            return;
+        }
+        
+        // Render search results
+        searchResults.innerHTML = matches.map(plant => `
+            <div class="plant-search-item" data-plant-id="${plant.id}">
+                <img src="${plant.image}" alt="${plant.name}" class="plant-search-item-image" onerror="this.src='/calculator/images/plants/Placeholder.webp'">
+                <span class="plant-search-item-name">${plant.name}</span>
+            </div>
+        `).join('');
+        
+        searchResults.style.display = 'block';
+        
+        // Add click handlers
+        searchResults.querySelectorAll('.plant-search-item').forEach(item => {
+            item.addEventListener('click', () => {
+                const plantId = item.dataset.plantId;
+                selectPlant(plantId);
+                searchInput.value = '';
+                searchResults.style.display = 'none';
+            });
+        });
+    });
+    
+    // Close search results when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !searchResults.contains(e.target)) {
+            searchResults.style.display = 'none';
+        }
+    });
+    
+    // Close search results on Escape key
+    searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            searchInput.value = '';
+            searchResults.style.display = 'none';
+        }
+    });
 }
 
 function renderPlantList() {
@@ -39,11 +105,12 @@ function renderPlantList() {
         const isSelected = state.selectedPlant && state.selectedPlant.id === plant.id;
         if (isSelected) item.classList.add('selected');
         
+        // Set background image
+        item.style.backgroundImage = `url('${plant.image}')`;
+        
         item.innerHTML = `
-            <img src="${plant.image}" alt="${plant.name}" class="plant-item-image" onerror="this.src='/calculator/images/plants/Placeholder.webp'">
-            <div class="plant-item-info">
-                <span class="plant-item-name">${plant.name}</span>
-            </div>
+            <div class="plant-item-overlay"></div>
+            <span class="plant-item-name">${plant.name}</span>
         `;
         
         item.addEventListener('click', () => selectPlant(plant.id));
@@ -75,15 +142,86 @@ function initializeVariantButtons() {
 // Stage Selection
 function initializeStageButtons() {
     const buttons = document.querySelectorAll('[data-stage]');
+    const ripenessSlider = document.getElementById('ripenessSlider');
+    const currentEmoji = document.getElementById('ripenessCurrentEmoji');
+    const currentName = document.getElementById('ripenessCurrentName');
+    const currentMult = document.getElementById('ripenessCurrentMult');
     
+    function updateRipenessDisplay(value) {
+        // Store the actual multiplier value
+        state.ripenessMultiplier = value;
+        
+        // Determine stage and emoji
+        let stage, emoji, stageName;
+        if (value < 2) {
+            stage = 'unripe';
+            emoji = '🌱';
+            stageName = 'Unripe';
+        } else if (value < 3) {
+            stage = 'ripened';
+            emoji = '🌿';
+            stageName = 'Ripened';
+        } else {
+            stage = 'lush';
+            emoji = '🌳';
+            stageName = 'Lush';
+        }
+        
+        // Update current display
+        currentEmoji.textContent = emoji;
+        currentName.textContent = stageName;
+        currentMult.textContent = `×${value.toFixed(1)}`;
+        
+        // Update button states
+        buttons.forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.stage === stage) {
+                btn.classList.add('active');
+            }
+        });
+        
+        state.selectedStage = stage;
+    }
+    
+    function updateSliderFromStage(stage) {
+        let value;
+        switch(stage) {
+            case 'unripe':
+                value = 1;
+                break;
+            case 'ripened':
+                value = 2;
+                break;
+            case 'lush':
+                value = 3;
+                break;
+            default:
+                value = 2;
+        }
+        ripenessSlider.value = value;
+        state.ripenessMultiplier = value;
+    }
+    
+    // Button click handlers
     buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
             state.selectedStage = btn.dataset.stage;
+            updateSliderFromStage(state.selectedStage);
+            updateRipenessDisplay(parseFloat(ripenessSlider.value));
             calculate();
         });
     });
+    
+    // Slider input handler
+    ripenessSlider.addEventListener('input', (e) => {
+        const value = parseFloat(e.target.value);
+        updateRipenessDisplay(value);
+        calculate();
+    });
+    
+    // Initialize
+    updateSliderFromStage('ripened');
+    updateRipenessDisplay(2);
 }
 
 // Mutation List
@@ -234,24 +372,30 @@ function initializeClearButton() {
         state.selectedPlant = null;
         state.selectedVariant = 'none';
         state.selectedStage = 'ripened';
+        state.ripenessMultiplier = 2.0;
         state.selectedMutations = [];
         state.customWeight = null;
         
         // Reset UI
-        const slider = document.getElementById('weightSlider');
-        const valueDisplay = document.getElementById('weightValue');
-        const baseLabel = document.querySelector('.weight-base-label');
-        slider.value = 1;
-        valueDisplay.textContent = '1.00';
-        baseLabel.textContent = '(base)';
+        const weightSlider = document.getElementById('weightSlider');
+        const weightValueDisplay = document.getElementById('weightValue');
+        const weightBaseLabel = document.querySelector('.weight-base-label');
+        weightSlider.value = 1;
+        weightValueDisplay.textContent = '1.00';
+        weightBaseLabel.textContent = '(base)';
         
-        document.querySelectorAll('[data-variant]').forEach(btn => {
-            btn.classList.remove('active');
-            if (btn.dataset.variant === 'none') btn.classList.add('active');
-        });
+        // Reset ripeness slider and buttons
+        const ripenessSlider = document.getElementById('ripenessSlider');
+        ripenessSlider.value = 2;
         document.querySelectorAll('[data-stage]').forEach(btn => {
             btn.classList.remove('active');
             if (btn.dataset.stage === 'ripened') btn.classList.add('active');
+        });
+        
+        // Reset variant buttons
+        document.querySelectorAll('[data-variant]').forEach(btn => {
+            btn.classList.remove('active');
+            if (btn.dataset.variant === 'none') btn.classList.add('active');
         });
         
         hideResults();
@@ -275,7 +419,7 @@ function calculate() {
     
     const plant = state.selectedPlant;
     const variantMultiplier = VARIANTS[state.selectedVariant]?.multiplier || 1;
-    const ripenessMultiplier = RIPENESS[state.selectedStage]?.multiplier || 1;
+    const ripenessMultiplier = state.ripenessMultiplier || 2.0; // Use actual slider value
     const mutationMultiplier = calculateMutationMultiplier();
     const weight = state.customWeight || plant.baseWeight;
     const weightFactor = Math.pow(weight / plant.baseWeight, 2);
