@@ -54,45 +54,8 @@ function renderPlantList() {
 function selectPlant(plantId) {
     state.selectedPlant = PLANTS.find(p => p.id === plantId);
     renderPlantList();
-    updatePlantInfo();
     updateWeightSlider();
     calculate();
-}
-
-// Plant Selection (old function - now replaced by selectPlant)
-function initializePlantSelect() {
-    // This function is no longer needed
-}
-
-function updatePlantInfo() {
-    const info = document.getElementById('plantInfo');
-    const plant = state.selectedPlant;
-    
-    if (!plant || !info) return;
-    
-    // Update plant image
-    const plantImage = document.getElementById('plantImage');
-    const plantBase = document.getElementById('plantBase');
-    const plantWeight = document.getElementById('plantWeight');
-    
-    if (!plantImage || !plantBase || !plantWeight) {
-        console.error('Plant info elements not found');
-        return;
-    }
-    
-    plantImage.src = plant.image;
-    plantImage.alt = plant.name;
-    plantImage.onerror = function() {
-        this.src = '/calculator/images/plants/Placeholder.webp';
-    };
-    
-    plantBase.textContent = `${plant.basePrice.toLocaleString()} Shillings`;
-    plantWeight.textContent = `${plant.baseWeight} kg`;
-    info.style.display = 'block';
-}
-
-function hidePlantInfo() {
-    document.getElementById('plantInfo').style.display = 'none';
 }
 
 // Variant Selection
@@ -291,7 +254,6 @@ function initializeClearButton() {
             if (btn.dataset.stage === 'ripened') btn.classList.add('active');
         });
         
-        hidePlantInfo();
         hideResults();
         renderPlantList();
         renderMutationList();
