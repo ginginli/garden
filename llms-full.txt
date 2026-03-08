@@ -150,28 +150,38 @@ Both Bill's Seed Shop and Molly's Gear Shop restock simultaneously every 5 minut
 
 ## Active Redemption Codes
 
-### Current Working Codes (Updated 2026-02-27)
+### Current Working Codes (Updated 2026-03-08)
+
+**CONSOLE**
+- Rewards: 2x Royal Seed Pack + 2,500 Shillings
+- Status: Active
+- Description: Special code for Royal Seed Packs and bonus Shillings
+
+**358**
+- Rewards: 10,000 Shillings
+- Status: Active
+- Description: Secret code discovered in Discord server (posted as "???")
+
+**ADMIN**
+- Rewards: 15,000 Shillings
+- Status: Active
+- Description: Administrative bonus code for all players
 
 **RELEASE**
 - Rewards: 2500 Shillings + 15x Carrot Seeds + 3x Corn Seeds
-- Status: Active
+- Status: Expired (March 3, 2026)
 - Description: Launch celebration code for all players
 
 **DAWN**
 - Rewards: 1x Dawnfruit Seed (rare exclusive seed)
-- Status: Active
+- Status: Expired (March 3, 2026)
 - Requirement: Must be redeemed to unlock this unique seed
 - Description: Special code for Dawnfruit, a rare mutation seed
 
 **GIFT**
 - Rewards: 1x Cabbage Seed + 1x of every Sprinkler type
-- Status: Active
+- Status: Expired (February 28, 2026)
 - Description: Complete sprinkler collection including Basic, Turbo, and Super Sprinklers
-
-**358**
-- Rewards: 2000 Shillings
-- Status: Active
-- Description: Secret code discovered in Discord server (posted as "???")
 
 ### How to Redeem Codes
 1. Launch Garden Horizons on Roblox
@@ -521,5 +531,5 @@ Our mission is to help Garden Horizons players maximize their farming efficiency
 
 ---
 
-Last Updated: 2026-02-27
+Last Updated: 2026-03-08
 Site: https://gardenhorizons.org

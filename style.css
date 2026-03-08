@@ -2010,3 +2010,147 @@ body::before {
         font-size: 2rem;
     }
 }
+
+
+/* =========================================
+   Code Cards - New Card-Based Layout
+   ========================================= */
+.active-codes-grid,
+.expired-codes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.active-code-card,
+.expired-code-card {
+    background: rgba(248, 245, 238, 0.92);
+    border: 2px solid rgba(220, 210, 195, 0.5);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.active-code-card:hover,
+.expired-code-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.code-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 24px;
+    border-bottom: 2px solid rgba(220, 210, 195, 0.3);
+}
+
+.code-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #2d5541;
+    margin: 0;
+    font-family: monospace;
+    letter-spacing: 1px;
+}
+
+.active-badge {
+    background: rgba(132, 192, 97, 0.2);
+    color: #2d5541;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid rgba(132, 192, 97, 0.4);
+}
+
+.copy-button {
+    background: rgba(132, 192, 97, 0.2);
+    color: #2d5541;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid rgba(132, 192, 97, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: var(--font-main);
+}
+
+.copy-button:hover {
+    background: rgba(132, 192, 97, 0.35);
+    border-color: rgba(132, 192, 97, 0.6);
+    transform: scale(1.05);
+}
+
+.expired-badge {
+    background: rgba(150, 150, 150, 0.2);
+    color: #666;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border: 2px solid rgba(150, 150, 150, 0.3);
+}
+
+.code-card-body {
+    padding: 24px;
+}
+
+.reward-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.reward-icon {
+    font-size: 2.5rem;
+}
+
+.reward-amount {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d5541;
+}
+
+.code-card-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    min-height: 48px;
+}
+
+.code-card-footer {
+    padding-top: 16px;
+    border-top: 1px solid rgba(220, 210, 195, 0.3);
+}
+
+.added-date {
+    font-size: 0.875rem;
+    color: #999;
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .active-codes-grid,
+    .expired-codes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .code-name {
+        font-size: 1.5rem;
+    }
+    
+    .reward-amount {
+        font-size: 1.25rem;
+    }
+}

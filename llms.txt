@@ -22,7 +22,8 @@ Garden Horizons reached 200,000+ players on launch day. Our site helps players m
 - Combo Mutations：Frostbit (3.5x) = Soaked + Snowy, Mossy (3.5x) = Foggy + Chilled, Muddy (5.0x) = Sandy + Flooded
 - Flora Diary：Real botanical knowledge system teaching facts about plants
 
-## Active Codes (Updated 2026-03-04)
+## Active Codes (Updated 2026-03-08)
+- CONSOLE：2x Royal Seed Pack, 2,500 Shillings (Released March 7, 2026)
 - 358：10,000 Shillings (Released February 22, 2026)
 - ADMIN：15,000 Shillings (Released March 1st, 2026)
 
