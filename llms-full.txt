@@ -183,6 +183,78 @@ Both Bill's Seed Shop and Molly's Gear Shop restock simultaneously every 5 minut
 - Status: Expired (February 28, 2026)
 - Description: Complete sprinkler collection including Basic, Turbo, and Super Sprinklers
 
+## Admin Abuse Events
+
+### What is Admin Abuse?
+Admin Abuse is a weekly live event in Garden Horizons where the game's developers join an active server and use their admin powers to create chaos. During the event, developers can spawn rare weather events like Thunderstorm and Starfall on demand, give players exclusive items, trigger unique mutations, and reveal upcoming features live on stream.
+
+### Next Admin Abuse Event
+**Date**: Saturday, March 14, 2026
+**Time**: 14:00 UTC
+
+**Timezone Schedule**:
+- 🇵🇭 Philippines (PHT): 10:00 PM
+- 🌏 SE Asia (ICT): 9:00 PM
+- 🇮🇳 India (IST): 7:30 PM
+- 🇪🇺 Europe (CET): 3:00 PM
+- 🇬🇧 UK (GMT): 2:00 PM
+- 🇺🇸 US East (EST): 10:00 AM
+- 🇺🇸 US West (PST): 7:00 AM
+- 🇦🇺 Australia (AEDT): 1:00 AM (next day)
+
+### What to Expect During Admin Abuse
+1. **Admin-only weather events** — Meteor Shower (Meteoric 10×), Tsunami (Tidal 2×), Beam Clash (Salad/Banned 10×)
+2. **Rare mutation drops** directly on player crops
+3. **Developer Q&A** and sneak peeks at upcoming content
+4. **Surprise drops** and exclusive rewards for attendees
+
+### How to Prepare for Admin Abuse
+1. **Upgrade Tools**: Upgrade your Watering Can and Sprinkler before the event. Developer-spawned weather events can trigger rare mutations, and you want to be ready to water as fast as possible.
+2. **Stock Seeds**: Stock up on fast-growing seeds like Carrot and Corn. Quick harvest cycles let you take advantage of rare weather windows during the event.
+3. **Clear Plots**: Keep your plots clear and ready to plant. Having empty plots means you can immediately react when developers announce surprise drops or special conditions.
+4. **Join Discord**: Join the official Discord for live event announcements. Developers stream the event and announce when they are joining servers.
+5. **Aim for Lush**: Aim for Lush variants on high-value crops. The Gold color variant combined with Lush gives the highest possible sell prices.
+
+### Event History
+The event typically lasts 1-2 hours and is streamed on the official Discord server. It has become one of the most anticipated weekly events in the Garden Horizons community, with hundreds of thousands of players searching for event times and countdowns each week.
+
+Admin Abuse events are the primary way developers communicate upcoming changes, tease new content, and reward the community. Past events have included early reveals of new tools, surprise variant drops, and morse code lore puzzles hidden in the game world during the event.
+
+## Active Redemption Codes
+
+### Current Working Codes (Updated 2026-03-08)
+
+**CONSOLE**
+- Rewards: 2x Royal Seed Pack + 2,500 Shillings
+- Status: Active
+- Description: Special code for Royal Seed Packs and bonus Shillings
+
+**358**
+- Rewards: 10,000 Shillings
+- Status: Active
+- Description: Secret code discovered in Discord server (posted as "???")
+
+**ADMIN**
+- Rewards: 15,000 Shillings
+- Status: Active
+- Description: Administrative bonus code for all players
+
+**RELEASE**
+- Rewards: 2500 Shillings + 15x Carrot Seeds + 3x Corn Seeds
+- Status: Expired (March 3, 2026)
+- Description: Launch celebration code for all players
+
+**DAWN**
+- Rewards: 1x Dawnfruit Seed (rare exclusive seed)
+- Status: Expired (March 3, 2026)
+- Requirement: Must be redeemed to unlock this unique seed
+- Description: Special code for Dawnfruit, a rare mutation seed
+
+**GIFT**
+- Rewards: 1x Cabbage Seed + 1x of every Sprinkler type
+- Status: Expired (February 28, 2026)
+- Description: Complete sprinkler collection including Basic, Turbo, and Super Sprinklers
+
 ### How to Redeem Codes
 1. Launch Garden Horizons on Roblox
 2. Click the "Codes" button in the game menu
