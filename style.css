@@ -162,11 +162,12 @@ body::before {
 }
 
 .hero-section {
-    min-height: 100vh;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     padding-top: 80px;
+    padding-bottom: 40px;
     position: relative;
 }
 
@@ -2382,5 +2383,180 @@ body::before {
     
     .timezone-table {
         min-width: 500px;
+    }
+}
+
+
+/* =========================================
+   Quick Navigation Cards (Homepage)
+   ========================================= */
+.quick-nav-section {
+    padding: 40px 0 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.quick-nav-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.quick-nav-card {
+    position: relative;
+    background: rgba(248, 245, 238, 0.92);
+    border: 2px solid rgba(220, 210, 195, 0.5);
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    overflow: hidden;
+}
+
+.quick-nav-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--clr-green-main), var(--clr-orange-main));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.quick-nav-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+    border-color: rgba(132, 192, 97, 0.6);
+}
+
+.quick-nav-card:hover::before {
+    opacity: 1;
+}
+
+.quick-nav-card.calculator-card::before {
+    background: linear-gradient(90deg, #f59e0b, #eab308);
+}
+
+.quick-nav-card.stock-card::before {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.quick-nav-card.codes-card::before {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+}
+
+.quick-nav-card.event-card::before {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+.quick-nav-card.mutations-card::before {
+    background: linear-gradient(90deg, #06b6d4, #0891b2);
+}
+
+.quick-nav-card.secrets-card::before {
+    background: linear-gradient(90deg, #6366f1, #4f46e5);
+}
+
+.quick-nav-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.quick-nav-card:hover .quick-nav-icon {
+    transform: scale(1.15);
+}
+
+.quick-nav-card h3 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: #2d5541;
+    margin: 0 0 6px 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.quick-nav-card p {
+    font-size: 0.8125rem;
+    color: #666;
+    margin: 0;
+    font-weight: 500;
+}
+
+.quick-nav-badge {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 3px 10px;
+    background: rgba(132, 192, 97, 0.15);
+    color: #2d5541;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid rgba(132, 192, 97, 0.3);
+}
+
+.quick-nav-live {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 3px 10px;
+    background: rgba(239, 68, 68, 0.15);
+    color: #dc2626;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    animation: pulse-live-badge 2s infinite;
+}
+
+@keyframes pulse-live-badge {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .quick-nav-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .quick-nav-section {
+        padding: 60px 0 40px;
+    }
+    
+    .quick-nav-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+    
+    .quick-nav-card {
+        padding: 24px 16px;
+    }
+    
+    .quick-nav-icon {
+        font-size: 2rem;
+        margin-bottom: 12px;
+    }
+    
+    .quick-nav-card h3 {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .quick-nav-grid {
+        grid-template-columns: 1fr;
     }
 }
