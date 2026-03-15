@@ -169,6 +169,8 @@ Allow: /stock/
 Allow: /codes/
 Allow: /mutations/
 Allow: /secrets/
+Allow: /updates/
+Allow: /adminabuse/
 Allow: /sitemap.xml
 Allow: /llms.txt
 Allow: /llms-full.txt

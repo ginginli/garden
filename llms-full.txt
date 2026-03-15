@@ -189,18 +189,27 @@ Both Bill's Seed Shop and Molly's Gear Shop restock simultaneously every 5 minut
 Admin Abuse is a weekly live event in Garden Horizons where the game's developers join an active server and use their admin powers to create chaos. During the event, developers can spawn rare weather events like Thunderstorm and Starfall on demand, give players exclusive items, trigger unique mutations, and reveal upcoming features live on stream.
 
 ### Next Admin Abuse Event
-**Date**: Saturday, March 14, 2026
-**Time**: 14:00 UTC
+**Date**: Saturday, March 21, 2026 (expected — NOT yet confirmed)
+**Time**: ~13:30 UTC
+**Note**: Watch Discord #announcements for the official date confirmation.
 
 **Timezone Schedule**:
-- 🇵🇭 Philippines (PHT): 10:00 PM
-- 🌏 SE Asia (ICT): 9:00 PM
-- 🇮🇳 India (IST): 7:30 PM
-- 🇪🇺 Europe (CET): 3:00 PM
-- 🇬🇧 UK (GMT): 2:00 PM
-- 🇺🇸 US East (EST): 10:00 AM
-- 🇺🇸 US West (PST): 7:00 AM
-- 🇦🇺 Australia (AEDT): 1:00 AM (next day)
+- 🇵🇭 Philippines (PHT): 9:30 PM
+- 🌏 SE Asia (ICT): 8:30 PM
+- 🇮🇳 India (IST): 7:00 PM
+- 🇪🇺 Europe (CET): 2:30 PM
+- 🇬🇧 UK (GMT): 1:30 PM
+- 🇺🇸 US East (EST): 9:30 AM
+- 🇺🇸 US West (PST): 6:30 AM
+- 🇦🇺 Australia (AEDT): 12:30 AM (next day)
+
+### Mythical Update — Coming March 21
+The next Admin Abuse coincides with the Mythical Update, the biggest update yet for Garden Horizons:
+- **Kraken Event**: A mysterious ancient creature emerges from the ocean, attacking IGMA helicopters
+- **IGMA Agents Arrival**: Government agents arrive to investigate the island's supernatural phenomena
+- **Mythical Rewards**: New mythical seed packs, exclusive mutations, and rare items
+- **New Plants & Weather**: New fruit varieties and brand new weather events
+- **Story Progression**: Continue Maya's research storyline and uncover island secrets
 
 ### What to Expect During Admin Abuse
 1. **Admin-only weather events** — Meteor Shower (Meteoric 10×), Tsunami (Tidal 2×), Beam Clash (Salad/Banned 10×)
@@ -571,10 +580,13 @@ Garden Horizons teaches real botanical facts through the Flora Diary system. Eac
 - Comprehensive secret location guides
 
 ### Site Structure
-- Homepage: Complete game overview and features
+- Homepage: Complete game overview, Mythical Update banner, and quick navigation
 - Calculator: Profit calculator with official Wiki formulas
 - Live Stock: Real-time shop inventory tracking
 - Codes: Active redemption codes updated daily
+- Admin Abuse: Live countdown with timezone schedule
+- Updates & Roadmap: Latest updates, Mythical Update details, and upcoming features roadmap
+- Mutations: Complete mutation guide with multipliers and stacking strategies
 - Secrets: Hidden locations and easter eggs guide
 
 ### Updates & Maintenance
