@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Horizons Helper</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <div class="logo-text">
+                    <h1>Garden Horizons</h1>
+                    <p>Helper Extension</p>
+                </div>
+            </div>
+        </header>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <button class="action-btn calculator-btn" id="openCalculator">
+                <span class="btn-icon">💰</span>
+                <span class="btn-text">Calculator</span>
+            </button>
+            <button class="action-btn codes-btn" id="openCodes">
+                <span class="btn-icon">🎁</span>
+                <span class="btn-text">Codes</span>
+                <span class="badge">3</span>
+            </button>
+            <button class="action-btn stock-btn" id="openStock">
+                <span class="btn-icon">📊</span>
+                <span class="btn-text">Live Stock</span>
+            </button>
+        </div>
+
+        <!-- Active Codes Section -->
+        <section class="section">
+            <h2 class="section-title">
+                <span>🎁 Active Codes</span>
+                <button class="refresh-btn" id="refreshCodes">↻</button>
+            </h2>
+            <div class="codes-list" id="codesList">
+                <div class="code-item">
+                    <div class="code-name">CONSOLE</div>
+                    <button class="copy-btn" data-code="CONSOLE">Copy</button>
+                </div>
+                <div class="code-item">
+                    <div class="code-name">358</div>
+                    <button class="copy-btn" data-code="358">Copy</button>
+                </div>
+                <div class="code-item">
+                    <div class="code-name">ADMIN</div>
+                    <button class="copy-btn" data-code="ADMIN">Copy</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shop Timer Section -->
+        <section class="section">
+            <h2 class="section-title">⏱️ Shop Restock</h2>
+            <div class="timer-container">
+                <div class="timer-item">
+                    <span class="timer-label">🌱 Seeds</span>
+                    <span class="timer-value" id="seedTimer">--:--</span>
+                </div>
+                <div class="timer-item">
+                    <span class="timer-label">🔧 Gear</span>
+                    <span class="timer-value" id="gearTimer">--:--</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Admin Abuse Countdown -->
+        <section class="section">
+            <h2 class="section-title">⚡ Admin Abuse</h2>
+            <div class="event-countdown">
+                <div class="countdown-display" id="adminCountdown">
+                    <span class="countdown-days">6d</span>
+                    <span class="countdown-hours">20h</span>
+                    <span class="countdown-mins">24m</span>
+                </div>
+                <p class="event-date">Saturday, March 14, 2026</p>
+            </div>
+        </section>
+
+        <!-- Quick Links -->
+        <section class="section">
+            <h2 class="section-title">🔗 Quick Links</h2>
+            <div class="links-grid">
+                <a href="https://gardenhorizons.org/mutations/" target="_blank" class="link-btn">
+                    <span>🧬</span> Mutations
+                </a>
+                <a href="https://gardenhorizons.org/secrets/" target="_blank" class="link-btn">
+                    <span>🔍</span> Secrets
+                </a>
+                <a href="https://gardenhorizons.org/adminabuse/" target="_blank" class="link-btn">
+                    <span>⚡</span> Events
+                </a>
+                <a href="https://gardenhorizons.org/" target="_blank" class="link-btn">
+                    <span>🏠</span> Website
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Garden Horizons Helper v1.0.0</p>
+            <p><a href="https://gardenhorizons.org" target="_blank">gardenhorizons.org</a></p>
+        </footer>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

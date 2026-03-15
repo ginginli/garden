@@ -10,6 +10,7 @@ Garden Horizons reached 200,000+ players on launch day. Our site helps players m
 - [Live Stock Tracker](https://gardenhorizons.org/stock/)：Real-time inventory updates for Bill's Seed Shop and Molly's Gear Shop with 5-minute restock cycles
 - [Active Codes](https://gardenhorizons.org/codes/)：Working redemption codes for free Shillings, seeds, and gear - updated daily
 - [Admin Abuse Countdown](https://gardenhorizons.org/adminabuse/)：Live countdown to the next Admin Abuse event with timezone schedule
+- [Updates & Roadmap](https://gardenhorizons.org/updates/)：Latest updates, upcoming features, and community-requested content roadmap
 - [Mutations Guide](https://gardenhorizons.org/mutations/)：Complete guide to crop mutations, multipliers, and stacking strategies for maximum profits
 - [Hidden Secrets](https://gardenhorizons.org/secrets/)：Easter eggs, secret locations, morse code messages, and community theories about future updates
 
@@ -23,10 +24,18 @@ Garden Horizons reached 200,000+ players on launch day. Our site helps players m
 - Combo Mutations：Frostbit (3.5x) = Soaked + Snowy, Mossy (3.5x) = Foggy + Chilled, Muddy (5.0x) = Sandy + Flooded
 - Flora Diary：Real botanical knowledge system teaching facts about plants
 
-## Active Codes (Updated 2026-03-08)
+## Active Codes (Updated 2026-03-13)
 - CONSOLE：2x Royal Seed Pack, 2,500 Shillings (Released March 7, 2026)
 - 358：10,000 Shillings (Released February 22, 2026)
 - ADMIN：15,000 Shillings (Released March 1st, 2026)
+
+## Upcoming Updates
+- Mythical Update (March 14, 2026)：Kraken event, IGMA agents arrival, new mythical rewards, new plants and weather events
+- Ocean Expansion (Q2 2026)：New ocean areas, underwater plants, boat merchant
+- Mythical Seed Line (Q2 2026)：New "Mythical" rarity tier above Legendary with supernatural properties
+- Cooperative Events (Q3 2026)：Server-wide challenges, boss battles, community quests
+- Trading System (Q3 2026)：Player-to-player trading for seeds, crops, and mutations
+- Seasonal Events (Q4 2026)：Holiday-themed crops, decorations, and limited-time content
 
 ## Expired Codes
 - RELEASE：600 Shillings + 15x Carrot Seeds + 3x Corn Seeds (Expired March 3, 2026)
