@@ -589,6 +589,14 @@ Garden Horizons teaches real botanical facts through the Flora Diary system. Eac
 - Mutations: Complete mutation guide with multipliers and stacking strategies
 - Secrets: Hidden locations and easter eggs guide
 
+### Multilingual Support
+The site is available in three languages:
+- English (default): https://gardenhorizons.org/
+- Filipino (Tagalog): https://gardenhorizons.org/ph/
+- Vietnamese: https://gardenhorizons.org/vn/
+
+All major pages are available in all three languages including: Homepage, Live Stock, Calculator, Codes, Admin Abuse, Updates, Mutations, Secrets, and Feedback. Each page includes hreflang tags for proper SEO and a fixed language switcher in the bottom-right corner.
+
 ### Updates & Maintenance
 - Codes verified daily
 - Stock tracker updates every 5 minutes

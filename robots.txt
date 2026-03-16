@@ -171,6 +171,8 @@ Allow: /mutations/
 Allow: /secrets/
 Allow: /updates/
 Allow: /adminabuse/
+Allow: /ph/
+Allow: /vn/
 Allow: /sitemap.xml
 Allow: /llms.txt
 Allow: /llms-full.txt
