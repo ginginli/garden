@@ -133,7 +133,10 @@
                 <a href="/mutations/">Mutations</a>
                 <a href="/secrets/">Secrets</a>
                 <a href="/feedback/">Feedback</a>
-                <a href="#" id="nav-search-btn" onclick="document.getElementById('searchModal').classList.add('active'); document.getElementById('searchInput').focus(); return false;">🔍 Search</a>
+                <div class="nav-search-wrapper">
+                    <input type="text" class="nav-search-input" id="navSearchInput" placeholder="Search..." autocomplete="off">
+                    <kbd class="nav-search-kbd">Ctrl+K</kbd>
+                </div>
             </nav>
             <a href="https://www.roblox.com/games/130594398886540/Garden-Horizons" target="_blank" class="btn btn-primary">Play on Roblox</a>
         </div>
