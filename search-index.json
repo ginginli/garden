@@ -1,0 +1,159 @@
+{
+  "pages": [
+    {
+      "url": "/",
+      "title": "Garden Horizons | The Ultimate Roblox Farming Experience",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons"},
+        {"level": 2, "text": "Features about Garden Horizons"},
+        {"level": 3, "text": "The 5-Minute Rush"},
+        {"level": 3, "text": "Dynamic Weather in Garden Horizons"},
+        {"level": 3, "text": "Flora Diary & Real Learning"},
+        {"level": 2, "text": "What is Garden Horizons?"},
+        {"level": 2, "text": "How to Play Garden Horizons"},
+        {"level": 3, "text": "Choose & Plant in Garden Horizons"},
+        {"level": 3, "text": "Tend & Ripen"},
+        {"level": 3, "text": "Harvest & Expand"},
+        {"level": 2, "text": "Why Garden Horizons?"},
+        {"level": 3, "text": "Fast-Paced Economy"},
+        {"level": 3, "text": "Ripeness Strategy"},
+        {"level": 3, "text": "Real Learning"},
+        {"level": 3, "text": "Mutation System"},
+        {"level": 2, "text": "Frequently Asked Questions"},
+        {"level": 2, "text": "Garden Horizons - Complete Game Guide & Free Tools"}
+      ]
+    },
+    {
+      "url": "/calculator/",
+      "title": "Garden Horizons Calculator - Profit & Value Calculator",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Calculator"},
+        {"level": 2, "text": "Calculate Your Profit"},
+        {"level": 2, "text": "Crop Value Chart"},
+        {"level": 2, "text": "How to Use the Calculator"},
+        {"level": 3, "text": "Select Your Crop"},
+        {"level": 3, "text": "Enter Growth Time"},
+        {"level": 3, "text": "Calculate Profit"}
+      ]
+    },
+    {
+      "url": "/stock/",
+      "title": "Garden Horizons Live Stock Tracker - Real-Time Updates",
+      "headings": [
+        {"level": 1, "text": "Live Stock Tracker"},
+        {"level": 2, "text": "Current Stock Status"},
+        {"level": 3, "text": "Bill's Seed Shop"},
+        {"level": 3, "text": "Molly's Gear Shop"},
+        {"level": 3, "text": "Weather System"},
+        {"level": 2, "text": "What is Live Stock?"},
+        {"level": 2, "text": "How to Track Stock"},
+        {"level": 2, "text": "Why Live Stock Matters"},
+        {"level": 2, "text": "Frequently Asked Questions"}
+      ]
+    },
+    {
+      "url": "/codes/",
+      "title": "Garden Horizons Codes - Free Rewards & Gems",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Codes"},
+        {"level": 2, "text": "Active Codes"},
+        {"level": 2, "text": "Expired Codes"},
+        {"level": 2, "text": "How to Redeem Codes"},
+        {"level": 2, "text": "Codes Information"}
+      ]
+    },
+    {
+      "url": "/adminabuse/",
+      "title": "Garden Horizons Admin Abuse - Event Countdown",
+      "headings": [
+        {"level": 1, "text": "Admin Abuse Event Countdown"},
+        {"level": 2, "text": "The Mythical Update"},
+        {"level": 3, "text": "Countdown to Mythical Update"},
+        {"level": 2, "text": "What to Expect"},
+        {"level": 2, "text": "Event Timeline"},
+        {"level": 2, "text": "Community Theories"}
+      ]
+    },
+    {
+      "url": "/updates/",
+      "title": "Garden Horizons Updates - Latest Game News",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Updates"},
+        {"level": 2, "text": "Latest Updates"},
+        {"level": 3, "text": "The Mythical Update"},
+        {"level": 2, "text": "Update History"},
+        {"level": 2, "text": "Coming Soon"}
+      ]
+    },
+    {
+      "url": "/mutations/",
+      "title": "Garden Horizons Mutations - FOGGY, FLOODED, CHILLED",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Mutations"},
+        {"level": 2, "text": "Mutation Types"},
+        {"level": 3, "text": "FOGGY Mutations"},
+        {"level": 3, "text": "FLOODED Mutations"},
+        {"level": 3, "text": "CHILLED Mutations"},
+        {"level": 3, "text": "STORM Mutations"},
+        {"level": 2, "text": "How Mutations Work"},
+        {"level": 2, "text": "Mutation Value Boost"},
+        {"level": 2, "text": "Tips for Mutations"}
+      ]
+    },
+    {
+      "url": "/secrets/",
+      "title": "Garden Horizons Secrets - Hidden Easter Eggs",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Secrets"},
+        {"level": 2, "text": "Discovered Secrets"},
+        {"level": 3, "text": "Secret Locations"},
+        {"level": 3, "text": "Hidden Items"},
+        {"level": 3, "text": "Easter Eggs"},
+        {"level": 2, "text": "Community Theories"},
+        {"level": 2, "text": "Tips for Finding Secrets"},
+        {"level": 2, "text": "Speculation"}
+      ]
+    },
+    {
+      "url": "/feedback/",
+      "title": "Garden Horizons Feedback - Share Your Ideas",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Feedback"},
+        {"level": 2, "text": "Submit Your Feedback"},
+        {"level": 2, "text": "Feature Suggestions"},
+        {"level": 2, "text": "Bug Reports"},
+        {"level": 2, "text": "Community Ideas"}
+      ]
+    },
+    {
+      "url": "/ph/",
+      "title": "Garden Horizons Philippines - Filipino Fan Site",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Philippines"},
+        {"level": 2, "text": "Mga Tampok ng Garden Horizons"},
+        {"level": 3, "text": "Ang 5-Minute Rush"},
+        {"level": 3, "text": "Dynamic na Panahon sa Garden Horizons"},
+        {"level": 3, "text": "Flora Diary at Tunay na Pag-aaral"},
+        {"level": 2, "text": "Ano ang Garden Horizons?"},
+        {"level": 2, "text": "Paano Maglaro ng Garden Horizons"},
+        {"level": 2, "text": "Bakit Garden Horizons?"},
+        {"level": 2, "text": "Mga Madalas na Tanong"}
+      ]
+    },
+    {
+      "url": "/vn/",
+      "title": "Garden Horizons Việt Nam - Trang Fan Việt",
+      "headings": [
+        {"level": 1, "text": "Garden Horizons Việt Nam"},
+        {"level": 2, "text": "Tính Năng của Garden Horizons"},
+        {"level": 3, "text": "Cuộc Đua 5 Phút"},
+        {"level": 3, "text": "Thời Tiết Động trong Garden Horizons"},
+        {"level": 3, "text": "Nhật Ký Thực Vật & Học Tập Thực Tế"},
+        {"level": 2, "text": "Garden Horizons là gì?"},
+        {"level": 2, "text": "Cách Chơi Garden Horizons"},
+        {"level": 2, "text": "Tại Sao Chọn Garden Horizons?"},
+        {"level": 2, "text": "Câu Hỏi Thường Gặp"}
+      ]
+    }
+  ]
+}
