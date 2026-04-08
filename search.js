@@ -851,9 +851,14 @@
             this.resultsContainer.innerHTML = html;
             this.selectedIndex = -1;
 
-            // Add click handlers for results
+            // Add click handlers for results - open in new tab
             this.resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
-                item.addEventListener('click', () => {
+                item.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const url = item.href;
+                    // Pass search query as URL parameter for highlighting
+                    const searchUrl = url + (url.includes('?') ? '&' : '?') + 'highlight=' + encodeURIComponent(query);
+                    window.open(searchUrl, '_blank');
                     this.closeModal();
                 });
             });
