@@ -811,22 +811,13 @@
             this.resultsContainer.innerHTML = html;
             this.selectedIndex = -1;
 
-            // Add click handlers for results - open in new tab with multiple keywords
+            // Add click handlers for results - open in new tab
             this.resultsContainer.querySelectorAll('.search-result-item').forEach(item => {
                 item.addEventListener('click', (e) => {
                     e.preventDefault();
                     const url = item.href;
-                    // Collect all heading keywords from this result for highlighting
-                    const keywords = [];
-                    const headingEls = item.querySelectorAll('.result-heading .heading-text');
-                    headingEls.forEach(el => {
-                        const text = el.textContent.trim();
-                        if (text && keywords.length < 10) {
-                            keywords.push(text);
-                        }
-                    });
-                    // Pass keywords as comma-separated URL parameter
-                    const searchUrl = url + (url.includes('?') ? '&' : '?') + 'q=' + encodeURIComponent(keywords.join(','));
+                    // Pass only the user's search query for highlighting
+                    const searchUrl = url + (url.includes('?') ? '&' : '?') + 'q=' + encodeURIComponent(query);
                     window.open(searchUrl, '_blank');
                     this.closeModal();
                 });
