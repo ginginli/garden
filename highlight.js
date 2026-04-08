@@ -263,23 +263,24 @@
             injectStyles();
             const kw = keyword.trim();
 
-            if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', () => {
-                    const count = highlightKeyword(kw);
-                    if (count > 0) {
-                        showToast(kw, count);
-                        createNavigationUI(count);
-                        // Scroll to first match
-                        setTimeout(() => scrollToMatch(0), 200);
-                    }
-                });
-            } else {
+            // Wait for DOM to be fully loaded
+            function runHighlight() {
                 const count = highlightKeyword(kw);
                 if (count > 0) {
                     showToast(kw, count);
                     createNavigationUI(count);
-                    setTimeout(() => scrollToMatch(0), 200);
+                    // Scroll to first match with delay
+                    setTimeout(() => scrollToMatch(0), 300);
+                } else {
+                    // Retry after a short delay in case DOM wasn't ready
+                    setTimeout(runHighlight, 100);
                 }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', runHighlight);
+            } else {
+                runHighlight();
             }
 
             // Add keyboard shortcuts
