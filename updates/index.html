@@ -339,10 +339,17 @@
 
     <script src="../main.js"></script>
     <script src="../search.js"></script>\n    <script src="../highlight.js"></script>
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 999; display: flex; gap: 8px;">
-        <a href="/updates/" style="padding: 8px 14px; background: rgba(132,192,97,0.3); color: #2d5541; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 2px solid rgba(132,192,97,0.6);">🇺🇸 EN</a>
-        <a href="/ph/updates/" style="padding: 8px 14px; background: rgba(248,245,238,0.92); color: #2d5541; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 2px solid rgba(132,192,97,0.4);">🇵🇭 FIL</a>
-        <a href="/vn/updates/" style="padding: 8px 14px; background: rgba(248,245,238,0.92); color: #2d5541; border-radius: 20px; text-decoration: none; font-weight: 700; font-size: 0.85rem; border: 2px solid rgba(132,192,97,0.4);">🇻🇳 VN</a>
+    <div class="lang-selector" id="langSelector">
+        <button class="lang-selector-btn" id="langSelectorBtn">
+            <span class="lang-current-flag">🌐</span>
+            <span class="lang-current-text">EN</span>
+            <span class="lang-arrow">▾</span>
+        </button>
+        <div class="lang-dropdown" id="langDropdown">
+            <a href="/" class="lang-option active" data-lang="en">🇺🇸 English</a>
+            <a href="/ph/" class="lang-option" data-lang="fil">🇵🇭 Filipino</a>
+            <a href="/vn/" class="lang-option" data-lang="vi">🇻🇳 Tiếng Việt</a>
+        </div>
     </div>
     <!-- Ad Code -->
     <script async="async" data-cfasync="false" src="https://pl28921019.effectivegatecpm.com/80a2285c3a7ecbc7ad83ae72943f2208/invoke.js"></script>
