@@ -337,6 +337,140 @@
             to { transform: rotate(360deg); }
         }
 
+        /* Floating Search Bar - Always Visible */
+        .search-floating-bar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 9998;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(30, 50, 40, 0.95), rgba(45, 85, 65, 0.95));
+            border: 2px solid rgba(132, 192, 97, 0.5);
+            border-radius: 50px;
+            padding: 8px 8px 8px 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            max-width: 280px;
+        }
+
+        .search-floating-bar:hover {
+            border-color: rgba(132, 192, 97, 0.8);
+            box-shadow: 0 6px 30px rgba(132, 192, 97, 0.3);
+            transform: scale(1.02);
+        }
+
+        .search-floating-bar .search-placeholder {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .search-floating-bar .search-shortcut-hint {
+            background: rgba(255, 255, 255, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-family: monospace;
+            white-space: nowrap;
+        }
+
+        .search-floating-bar .search-icon-btn {
+            background: linear-gradient(135deg, var(--clr-green-main), var(--clr-green-hover));
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .search-floating-bar .search-icon-btn:hover {
+            transform: scale(1.1);
+        }
+
+        .search-floating-bar .search-icon-btn svg {
+            width: 20px;
+            height: 20px;
+            fill: #fff;
+        }
+
+        /* Mobile Search FAB - Bottom Right */
+        .search-fab-mobile {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            background: linear-gradient(135deg, var(--clr-green-main), var(--clr-green-hover));
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(132, 192, 97, 0.3);
+            transition: all 0.3s ease;
+            animation: fabPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes fabPulse {
+            0%, 100% { box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(132, 192, 97, 0.3); }
+            50% { box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 35px rgba(132, 192, 97, 0.5); }
+        }
+
+        .search-fab-mobile:hover {
+            transform: scale(1.1);
+        }
+
+        .search-fab-mobile svg {
+            width: 28px;
+            height: 28px;
+            fill: #fff;
+        }
+
+        /* Pulse animation for desktop search bar */
+        .search-floating-bar .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background: var(--clr-green-main);
+            border-radius: 50%;
+            margin-right: 12px;
+            animation: dotPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.3); }
+        }
+
+        @media (max-width: 768px) {
+            .search-floating-bar {
+                display: none;
+            }
+
+            .search-fab-mobile {
+                display: flex;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .search-fab-mobile {
+                display: none;
+            }
+        }
+
         @media (max-width: 768px) {
             .search-modal {
                 padding-top: 5vh;
@@ -451,20 +585,48 @@
         return modal;
     }
 
-    // Create search toggle button
+    // Create search toggle button (hidden, kept for compatibility)
     function createSearchButton() {
-        const button = document.createElement('button');
-        button.className = 'search-toggle-btn';
-        button.id = 'searchToggle';
-        button.innerHTML = `
+        // Desktop: Floating search bar in top right
+        const floatingBar = document.createElement('div');
+        floatingBar.className = 'search-floating-bar';
+        floatingBar.id = 'searchFloatingBar';
+        floatingBar.innerHTML = `
+            <span class="pulse-dot"></span>
+            <span class="search-placeholder">Search site...</span>
+            <span class="search-shortcut-hint">Ctrl+K</span>
+            <button class="search-icon-btn" aria-label="Search">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+                </svg>
+            </button>
+        `;
+        document.body.appendChild(floatingBar);
+
+        // Mobile: FAB button in bottom right
+        const fabButton = document.createElement('button');
+        fabButton.className = 'search-fab-mobile';
+        fabButton.id = 'searchFabMobile';
+        fabButton.innerHTML = `
             <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
             </svg>
-            <span class="search-hint">Search (Ctrl+K)</span>
         `;
-        document.body.appendChild(button);
-        return button;
+        document.body.appendChild(fabButton);
+
+        // Bind events to both
+        floatingBar.addEventListener('click', () => {
+            if (event.target.closest('.search-icon-btn')) {
+                openModalFn();
+            }
+        });
+
+        fabButton.addEventListener('click', () => openModalFn());
+
+        return { floatingBar, fabButton };
     }
+
+    let openModalFn = null;
 
     // Search functionality
     class SiteSearch {
@@ -484,6 +646,9 @@
             this.searchButton = createSearchButton();
             this.searchInput = document.getElementById('searchInput');
             this.resultsContainer = document.getElementById('searchResults');
+
+            // Set up open modal function for buttons
+            openModalFn = () => this.openModal();
 
             // Load search index
             try {
@@ -521,8 +686,10 @@
         }
 
         bindEvents() {
-            // Toggle search modal
-            this.searchButton.addEventListener('click', () => this.openModal());
+            // Toggle search modal (for any remaining references)
+            if (this.searchButton && this.searchButton.addEventListener) {
+                this.searchButton.addEventListener('click', () => this.openModal());
+            }
 
             // Close modal
             document.getElementById('searchClose').addEventListener('click', () => this.closeModal());
