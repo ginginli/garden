@@ -3007,3 +3007,39 @@ body::before {
         font-size: 5rem;
     }
 }
+
+/* =========================================
+   SEO Text Section - Long Tail Keywords
+   ========================================= */
+.seo-text-section {
+    background: #f8f5ee;
+    padding: 40px 0;
+}
+
+.seo-text-section .container {
+    max-width: 900px;
+}
+
+.seo-text-title {
+    color: #2d5541;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+}
+
+.seo-text-content {
+    line-height: 1.8;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.seo-text-content p {
+    margin-bottom: 16px;
+}
+
+.seo-text-content p:last-child {
+    margin-bottom: 0;
+}
+
+.seo-text-content strong {
+    color: #2d5541;
+}
