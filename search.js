@@ -337,61 +337,68 @@
             to { transform: rotate(360deg); }
         }
 
-        /* Navigation Search Bar */
+        /* Navigation Search Bar - Prominent Green Style */
         .nav-search-wrapper {
             display: flex;
             align-items: center;
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 8px;
-            padding: 6px 12px;
+            background: linear-gradient(135deg, rgba(132, 192, 97, 0.15), rgba(132, 192, 97, 0.08));
+            border: 2px solid rgba(132, 192, 97, 0.4);
+            border-radius: 10px;
+            padding: 8px 14px;
             gap: 10px;
             transition: all 0.3s ease;
             cursor: pointer;
+            margin-left: 16px;
         }
 
         .nav-search-wrapper:hover {
-            background: rgba(0, 0, 0, 0.35);
-            border-color: rgba(132, 192, 97, 0.4);
+            background: linear-gradient(135deg, rgba(132, 192, 97, 0.25), rgba(132, 192, 97, 0.15));
+            border-color: rgba(132, 192, 97, 0.7);
+            box-shadow: 0 0 20px rgba(132, 192, 97, 0.25);
         }
 
         .nav-search-wrapper:focus-within {
-            background: rgba(0, 0, 0, 0.4);
-            border-color: rgba(132, 192, 97, 0.6);
-            box-shadow: 0 0 15px rgba(132, 192, 97, 0.2);
+            background: linear-gradient(135deg, rgba(132, 192, 97, 0.3), rgba(132, 192, 97, 0.18));
+            border-color: var(--clr-green-main);
+            box-shadow: 0 0 25px rgba(132, 192, 97, 0.4);
+        }
+
+        .nav-search-icon {
+            color: var(--clr-green-main);
+            flex-shrink: 0;
         }
 
         .nav-search-input {
             background: transparent;
             border: none;
             outline: none;
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.9rem;
+            color: #fff;
+            font-size: 0.95rem;
             font-family: var(--font-main);
-            width: 100px;
+            width: 120px;
             transition: width 0.3s ease;
         }
 
         .nav-search-input::placeholder {
-            color: rgba(255, 255, 255, 0.45);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .nav-search-input:focus {
-            width: 140px;
+            width: 160px;
         }
 
         .nav-search-kbd {
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(132, 192, 97, 0.2);
+            border: 1px solid rgba(132, 192, 97, 0.35);
             border-radius: 5px;
-            padding: 2px 6px;
+            padding: 2px 8px;
             font-size: 0.7rem;
-            color: rgba(255, 255, 255, 0.5);
+            color: var(--clr-green-main);
             font-family: monospace;
             white-space: nowrap;
         }
 
-        /* Mobile FAB */
+        /* Mobile FAB - Larger and more prominent */
         .search-fab-mobile {
             position: fixed;
             bottom: 24px;
@@ -400,14 +407,20 @@
             background: linear-gradient(135deg, var(--clr-green-main), var(--clr-green-hover));
             border: none;
             border-radius: 50%;
-            width: 56px;
-            height: 56px;
+            width: 64px;
+            height: 64px;
             display: none;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4), 0 0 20px rgba(132, 192, 97, 0.3);
+            box-shadow: 0 8px 32px rgba(132, 192, 97, 0.4), 0 0 30px rgba(132, 192, 97, 0.3);
             transition: all 0.3s ease;
+            animation: fabGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes fabGlow {
+            0%, 100% { box-shadow: 0 8px 32px rgba(132, 192, 97, 0.4), 0 0 30px rgba(132, 192, 97, 0.3); }
+            50% { box-shadow: 0 8px 32px rgba(132, 192, 97, 0.5), 0 0 45px rgba(132, 192, 97, 0.4); }
         }
 
         .search-fab-mobile:hover {
@@ -415,8 +428,8 @@
         }
 
         .search-fab-mobile svg {
-            width: 26px;
-            height: 26px;
+            width: 30px;
+            height: 30px;
             fill: #fff;
         }
 
