@@ -10,12 +10,13 @@
 
     const styles = `
         .search-highlight-target {
-            background: linear-gradient(90deg, rgba(132, 192, 97, 0.3), rgba(132, 192, 97, 0.5), rgba(132, 192, 97, 0.3));
+            background: linear-gradient(90deg, rgba(0, 230, 118, 0.4), rgba(0, 230, 118, 0.7), rgba(0, 230, 118, 0.4));
             background-size: 200% 100%;
             animation: highlightGlow 2s ease-in-out infinite;
             border-radius: 4px;
-            padding: 2px 4px;
-            box-shadow: 0 0 8px rgba(132, 192, 97, 0.5);
+            padding: 2px 6px;
+            box-shadow: 0 0 12px rgba(0, 230, 118, 0.6);
+            border: 1px solid rgba(0, 230, 118, 0.5);
         }
 
         @keyframes highlightGlow {
@@ -24,8 +25,9 @@
         }
 
         .search-highlight-current {
-            background: rgba(132, 192, 97, 0.7) !important;
-            box-shadow: 0 0 15px rgba(132, 192, 97, 0.8);
+            background: rgba(0, 230, 118, 0.9) !important;
+            box-shadow: 0 0 20px rgba(0, 230, 118, 1);
+            border: 1px solid #00E676;
         }
 
         .search-highlight-toast {
@@ -35,7 +37,7 @@
             transform: translateX(-50%);
             z-index: 10001;
             background: linear-gradient(135deg, rgba(30, 50, 40, 0.98), rgba(45, 85, 65, 0.98));
-            border: 2px solid rgba(132, 192, 97, 0.6);
+            border: 2px solid rgba(0, 230, 118, 0.6);
             border-radius: 12px;
             padding: 12px 20px;
             color: #fff;
@@ -62,7 +64,7 @@
         }
 
         .search-highlight-toast .count {
-            background: rgba(132, 192, 97, 0.3);
+            background: rgba(0, 230, 118, 0.3);
             padding: 2px 8px;
             border-radius: 10px;
             font-size: 0.8rem;
@@ -105,7 +107,7 @@
             right: 24px;
             z-index: 10000;
             background: rgba(30, 50, 40, 0.95);
-            border: 2px solid rgba(132, 192, 97, 0.5);
+            border: 2px solid rgba(0, 230, 118, 0.5);
             border-radius: 20px;
             padding: 6px 14px;
             color: #fff;

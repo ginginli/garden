@@ -132,8 +132,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (!isActive) {
                 item.classList.add('active');
+                questionBtn.setAttribute('aria-expanded', 'true');
             } else {
                 item.classList.remove('active');
+                questionBtn.setAttribute('aria-expanded', 'false');
             }
         });
     });

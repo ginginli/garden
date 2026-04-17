@@ -2,8 +2,8 @@
    1. 全局变量与基础重置
    ========================================= */
 :root {
-    --clr-green-main: #84C061;
-    --clr-green-hover: #6fa84e;
+    --clr-green-main: #00E676;
+    --clr-green-hover: #00C853;
     --clr-orange-main: #ff9d3d;
     --clr-blue-sky: #6bb8e8;
     --clr-text-light: #ffffff;
@@ -3118,4 +3118,28 @@ body::before {
 
 .seo-text-content strong {
     color: #2d5541;
+}
+
+/* =========================================
+   Accessibility & Mobile Improvements
+   ========================================= */
+
+/* Hide Ctrl+K shortcut hint on mobile (meaningless on touch devices) */
+@media (max-width: 768px) {
+    .nav-search-kbd {
+        display: none;
+    }
+}
+
+/* Screen reader only utility class */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
 }

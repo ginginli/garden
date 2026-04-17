@@ -156,7 +156,7 @@ Allow: /
 Allow: /llms.txt
 Allow: /llms-full.txt
 
-# Scrapy (通常用于数据抓取，可选择禁止)
+# Scrapy (数据抓取工具，禁止访问)
 User-agent: Scrapy
 Disallow: /
 
